@@ -1,0 +1,78 @@
+@media (max-width: 992px) {
+
+  nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #inicio h1 {
+    font-size: 3rem;
+  }
+
+  .planes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  #inicio {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #inicio h1 {
+    font-size: 2.5rem;
+  }
+
+  #inicio a {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .beneficios-container,
+  .horarios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planes-container,
+  .galeria-container {
+    grid-template-columns: 1fr;
+  }
+
+  #contacto {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+}
