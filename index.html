@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Twenty4 Fitness</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
@@ -16,41 +19,50 @@
       <nav aria-label="Navegación principal">
         <a href="#inicio">
           <img
-            src="./img/logo-horizontal.png"
+            src="./img/logo/logo-dark.png"
             alt="Logo de Twenty4 Fitness"
             class="logo"
+            id="logo"
           />
         </a>
 
-        <ul>
-          <li>
-            <a href="#inicio">Inicio</a>
-          </li>
+        <button id="menu-toggle" aria-label="Abrir menú">
+           ☰
+        </button>
 
-          <li>
-            <a href="#nosotros">Nosotros</a>
-          </li>
+        <ul class="nav-links">
+  <li>
+    <a href="#inicio">Inicio</a>
+  </li>
 
-          <li>
-            <a href="#beneficios">Beneficios</a>
-          </li>
+  <li>
+    <a href="#nosotros">Nosotros</a>
+  </li>
 
-          <li>
-            <a href="#planes">Planes</a>
-          </li>
+  <li>
+    <a href="#beneficios">Beneficios</a>
+  </li>
 
-          <li>
-            <a href="#galeria">Galería</a>
-          </li>
+  <li>
+    <a href="#planes">Planes</a>
+  </li>
 
-          <li>
-            <a href="#horarios">Horarios</a>
-          </li>
+  <li>
+    <a href="#galeria">Galería</a>
+  </li>
 
-          <li>
-            <a href="#contacto">Contacto</a>
-          </li>
-        </ul>
+  <li>
+    <a href="#horarios">Horarios</a>
+  </li>
+
+  <li>
+    <a href="#reglamento">Reglamento</a>
+  </li>
+
+  <li>
+    <a href="#contacto">Contacto</a>
+  </li>
+</ul>
 
         <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
       </nav>
@@ -74,41 +86,42 @@
         </div>
       </section>
 
+      
       <section id="nosotros">
-        <div class="container">
-          <article>
-            <h2>Sobre Nosotros</h2>
+  <div class="container nosotros-container">
+    <h2>Sobre Nosotros</h2>
 
-            <p>
-              Twenty4 Fitness fue creado en el año 2021 por Esteban Jimenez y
-              Diego Gamboa, con la iniciativa de construir un espacio fitness en
-              La Palmera, una zona donde no existía un gimnasio con este
-              enfoque.
-            </p>
+    <div class="nosotros-line"></div>
 
-            <p>
-              Luego de un año, el proyecto pasó a ser administrado completamente
-              por su actual propietario, manteniendo siempre el objetivo de
-              ofrecer un ambiente moderno, motivador y enfocado en la superación
-              personal.
-            </p>
-          </article>
+    <article class="nosotros-content">
+      <p>
+        Twenty4 Fitness fue creado en el año 2021 por Esteban Jimenez y Diego
+        Gamboa, con la iniciativa de construir un espacio fitness en La
+        Palmera, una zona donde no existía un gimnasio con este enfoque.
+      </p>
 
-          <article>
-            <h3>Coach Principal</h3>
+      <p>
+        Luego de un año, el proyecto pasó a ser administrado completamente por
+        su actual propietario, manteniendo siempre el objetivo de ofrecer un
+        ambiente moderno, motivador y enfocado en la superación personal.
+      </p>
+    </article>
 
-            <p>
-              El coach principal cuenta con más de 11 años de experiencia en
-              entrenamiento físico y 4 años compitiendo en culturismo.
-            </p>
+    <article class="coach-highlight">
+      <span class="coach-tag">Coach Principal</span>
 
-            <p>
-              Además, posee formación en personal training, inducción al
-              culturismo y es campeón nacional en culturismo natural.
-            </p>
-          </article>
-        </div>
-      </section>
+      <p>
+        El coach principal cuenta con más de 11 años de experiencia en
+        entrenamiento físico y 4 años compitiendo en culturismo.
+      </p>
+
+      <p>
+        Además, posee formación en personal training, inducción al culturismo y
+        es campeón nacional en culturismo natural.
+      </p>
+    </article>
+  </div>
+</section>
 
       <section id="beneficios">
         <div class="container">
@@ -159,56 +172,84 @@
           <h2>Planes</h2>
 
           <div class="planes-container">
-            <article>
+            <!-- PLAN 1 -->
+
+            <article class="plan-card">
               <h3>Sesión Diaria</h3>
 
-              <p>₡2 000 por día</p>
+              <p class="plan-price">₡2 000</p>
+
+              <p class="plan-subtitle">Pago por día</p>
 
               <ul>
-                <li>Acceso completo al gimnasio durante un día</li>
-
-                <li>Uso de máquinas y área de cardio</li>
-
-                <li>Acceso a lockers y servicios sanitarios</li>
+                <li>✓ Acceso completo al gimnasio</li>
+                <li>✓ Uso de máquinas y cardio</li>
+                <li>✓ Acceso a lockers</li>
               </ul>
             </article>
 
-            <article>
-              <h3>Planes Generales</h3>
+            <!-- PLAN 2 DESTACADO -->
+
+            <article class="plan-card featured-plan">
+              <span class="plan-badge">Popular </span>
+
+              <h3>Planes</h3>
+
+              <p class="plan-price">₡18 000</p>
+
+              <p class="plan-subtitle">Mensualidad general</p>
+
+              <!-- OPCIONES DE PLAN -->
+
+              <div class="plan-options">
+                <div class="plan-option">
+                  <span>Universitario</span>
+                  <strong>₡16 000</strong>
+                </div>
+
+                <div class="plan-option">
+                  <span>Estudiantil</span>
+                  <strong>₡14 000</strong>
+                </div>
+
+                <div class="plan-option">
+                  <span>Quincenal</span>
+                  <strong>₡12 000</strong>
+                </div>
+
+                <div class="plan-option">
+                  <span>Semanal</span>
+                  <strong>₡10 000</strong>
+                </div>
+              </div>
+
+              <!-- BENEFICIOS -->
 
               <ul>
-                <li>Mensualidad general: ₡18 000</li>
-
-                <li>Mensualidad universitaria: ₡16 000</li>
-
-                <li>Mensualidad estudiantil: ₡14 000</li>
-
-                <li>Plan quincenal: ₡12 000</li>
-
-                <li>Plan semanal: ₡10 000</li>
+                <li>✓ Acceso completo al gimnasio</li>
+                <li>✓ Área de cardio y pesas</li>
+                <li>✓ Lockers y servicios sanitarios</li>
               </ul>
-
-              <p>
-                Incluye acceso a todas las instalaciones, máquinas, área de
-                cardio, lockers y servicios sanitarios.
-              </p>
             </article>
 
-            <article>
+            <!-- PLAN 3 -->
+
+            <article class="plan-card premium-plan">
+              <span class="plan-badge premium-badge"> Premium </span>
+
               <h3>Plan Personal</h3>
 
-              <p>₡85 000 mensuales</p>
+              <p class="plan-price">₡85 000</p>
+
+              <p class="plan-subtitle">Entrenamiento personalizado</p>
 
               <ul>
-                <li>3 clases personalizadas por semana</li>
-
-                <li>Mensualidad completa del gimnasio</li>
-
-                <li>Acompañamiento durante toda la rutina</li>
-
-                <li>Documentación de progresión diaria</li>
-
-                <li>Evaluación mensual</li>
+                <li>✓ 3 clases por semana</li>
+                <li>✓ Mensualidad incluida</li>
+                <li>✓ Rutina personalizada</li>
+                <li>✓ Seguimiento diario</li>
+                <li>✓ Evaluación mensual</li>
+                <li>✓ Acompañamiento completo</li>
               </ul>
             </article>
           </div>
@@ -270,86 +311,259 @@
           <h2>Horarios</h2>
 
           <div class="horarios-container">
+            <article class="horario-card">
+              <div class="horario-icon">
+                <i data-lucide="clock-3"></i>
+              </div>
+
+              <div class="horario-info">
+                <h3>Lunes a Viernes</h3>
+                <p>5:00 AM - 10:00 PM</p>
+              </div>
+            </article>
+
+            <article class="horario-card">
+              <div class="horario-icon">
+                <i data-lucide="calendar-days"></i>
+              </div>
+
+              <div class="horario-info">
+                <h3>Sábados y Feriados</h3>
+                <p>9:00 AM - 2:00 PM</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="reglamento">
+        <div class="container">
+          <h2>Reglamento General</h2>
+
+          <div class="reglamento-container">
             <article>
-              <h3>Lunes a Viernes</h3>
+              <h3>Uso de Toalla</h3>
 
-              <p>5:00 AM - 10:00 AM</p>
-
-              <p>2:00 PM - 9:00 PM</p>
+              <p>
+                Es obligatorio utilizar una toalla personal durante el
+                entrenamiento.
+              </p>
             </article>
 
             <article>
-              <h3>Sábados</h3>
+              <h3>Limpieza de Equipos</h3>
 
-              <p>9:00 AM - 2:00 PM</p>
+              <p>
+                Cada máquina y accesorio debe limpiarse después de utilizarse.
+              </p>
+            </article>
+
+            <article>
+              <h3>Respeto y Disciplina</h3>
+
+              <p>
+                No se permite lenguaje ofensivo ni conductas inapropiadas dentro
+                del gimnasio.
+              </p>
+            </article>
+
+            <article>
+              <h3>Cuidado del Equipo</h3>
+
+              <p>
+                Todo equipo utilizado debe devolverse correctamente a su lugar.
+              </p>
+            </article>
+
+            <article>
+              <h3>Uso de Lockers</h3>
+
+              <p>
+                El uso de casilleros es gratuito, pero cada usuario es
+                responsable de sus pertenencias.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
       <section id="contacto">
-        <div class="container">
-          <article>
-            <h2>Contáctanos</h2>
 
-            <p>
-              Puedes comunicarte con nosotros a través de nuestras redes
-              sociales o visitarnos directamente en nuestras instalaciones.
-            </p>
+  <div class="container">
 
-            <ul>
-              <li>
-                <a
-                  href="https://wa.me/50662816453"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </a>
-              </li>
+    <h2>Contáctanos</h2>
 
-              <li>
-                <a
-                  href="https://www.instagram.com/twenty4_fitness"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </a>
-              </li>
+    <p class="contact-description">
+      Puedes comunicarte con nosotros a través de nuestras redes sociales
+      o visitarnos directamente en nuestras instalaciones.
+    </p>
 
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100064686981400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Facebook
-                </a>
-              </li>
-            </ul>
+    <div class="contacto-container">
 
-            <p>Ciudad Quesada, San Carlos</p>
-          </article>
+      <!-- WHATSAPP -->
 
-          <article>
-            <h2>Ubicación</h2>
+      <article class="contact-card">
 
-            <iframe
-              src=""
-              title="Ubicación de Twenty4 Fitness"
-              loading="lazy"
-              allowfullscreen
-            >
-            </iframe>
-          </article>
+        <div class="contact-icon">
+          <i class="fa-brands fa-whatsapp"></i>
         </div>
-      </section>
-    </main>
+
+        <div>
+
+          <h3>WhatsApp</h3>
+
+          <a
+            href="https://wa.me/50662816453"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            +506 6281 6453
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- INSTAGRAM -->
+
+      <article class="contact-card">
+
+        <div class="contact-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <div>
+
+          <h3>Instagram</h3>
+
+          <a
+            href="https://www.instagram.com/twenty4_fitness"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @twenty4_fitness
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- FACEBOOK -->
+
+      <article class="contact-card">
+
+        <div class="contact-icon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+
+        <div>
+
+          <h3>Facebook</h3>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=100064686981400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twenty4 Fitness
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- UBICACIÓN -->
+
+      <article class="contact-card">
+
+        <div class="contact-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div>
+
+          <h3>Ubicación</h3>
+
+          <p>La Palmera, San Carlos</p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- MAPA -->
+
+    <div class="map-container">
+
+      <iframe
+        src="https://www.google.com/maps?q=Twenty4+Fitness+La+Palmera+San+Carlos&output=embed"
+        title="Ubicación de Twenty4 Fitness"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
 
     <footer>
-      <p>Twenty4 Fitness © 2026. Todos los derechos reservados.</p>
+      <div class="container footer-container">
+        <article class="footer-brand">
+          <img
+            src="./img/logo/logo-dark.png"
+            alt="Logo de Twenty4 Fitness"
+            class="footer-logo"
+            id="footer-logo"
+          />
+
+          <p>Disciplina • Constancia • Rendimiento</p>
+        </article>
+
+        <article class="footer-social">
+          <h3>Síguenos</h3>
+
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/twenty4_fitness"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=100064686981400"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://wa.me/50662816453"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <p class="footer-copy">
+        © 2026 Twenty4 Fitness. Todos los derechos reservados.
+      </p>
     </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
 
     <script src="./js/app.js"></script>
   </body>

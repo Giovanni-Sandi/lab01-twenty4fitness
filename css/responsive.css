@@ -1,5 +1,4 @@
 @media (max-width: 992px) {
-
   nav {
     flex-direction: column;
     gap: 1.5rem;
@@ -21,11 +20,9 @@
   .galeria-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 @media (max-width: 768px) {
-
   section {
     padding: 4rem 1.5rem;
   }
@@ -59,10 +56,12 @@
     flex-direction: column;
   }
 
+  .reglamento-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-
   nav ul {
     gap: 1rem;
   }
@@ -74,5 +73,4 @@
   section h2 {
     font-size: 2rem;
   }
-
 }
