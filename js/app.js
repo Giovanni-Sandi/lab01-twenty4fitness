@@ -72,6 +72,28 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+/* OCULTAR NAVBAR AL BAJAR */
+
+const header = document.querySelector("header");
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 100) {
+
+    header.classList.add("hide-navbar");
+
+  } else {
+
+    header.classList.remove("hide-navbar");
+  }
+
+  lastScroll = currentScroll;
+});
+
 /* MENU MOBILE */
 
 const menuToggle = document.getElementById("menu-toggle");
@@ -79,5 +101,39 @@ const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
+
   navLinks.classList.toggle("active");
+
+  const expanded =
+    menuToggle.getAttribute("aria-expanded") === "true";
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    !expanded
+  );
+});
+
+/* BOTON VOLVER ARRIBA */
+
+const scrollTopButton =
+  document.getElementById("scroll-top");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 400) {
+
+    scrollTopButton.classList.add("show");
+
+  } else {
+
+    scrollTopButton.classList.remove("show");
+  }
+});
+
+scrollTopButton.addEventListener("click", () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });

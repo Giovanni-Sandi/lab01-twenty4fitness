@@ -74,3 +74,94 @@
     font-size: 2rem;
   }
 }
+
+/* ========================================= */
+/* RESPONSIVE NOSOTROS */
+/* ========================================= */
+
+@media (max-width: 900px) {
+
+  #nosotros {
+    margin-top: 3rem;
+
+    padding: 4rem 0;
+  }
+
+  .nosotros-container {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  /* IMAGEN */
+
+  .nosotros-image {
+    height: 420px;
+
+    margin-bottom: 3rem;
+  }
+
+  .nosotros-image::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(5,5,5,0.1),
+        rgba(5,5,5,0.92)
+      );
+  }
+
+  body.light-mode .nosotros-image::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.05),
+        rgba(245,245,245,0.92)
+      );
+  }
+
+  /* CONTENIDO */
+
+  .nosotros-content {
+    padding: 0 1rem;
+  }
+
+  .section-tag {
+    margin: 0 auto 1.5rem;
+
+    display: table;
+  }
+
+  .nosotros-content h2 {
+    font-size: 3.6rem;
+
+    text-align: center;
+
+    margin-bottom: 2rem;
+  }
+
+  .nosotros-text p {
+    font-size: 1rem;
+
+    line-height: 1.9;
+  }
+
+  .gym-info strong {
+    font-size: 3rem;
+  }
+
+  .coach-section {
+    padding-left: 1.2rem;
+  }
+
+  .coach-section h3 {
+    font-size: 2rem;
+  }
+
+  .coach-skills {
+    gap: 2rem;
+  }
+
+  .coach-skills strong {
+    font-size: 2rem;
+  }
+}

@@ -1,180 +1,239 @@
 <!doctype html>
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+
     <title>Twenty4 Fitness</title>
+
+    <!-- LUCIDE -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- FONT AWESOME -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
+    <!-- CSS -->
+
     <link rel="stylesheet" href="./css/style.css" />
+
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
 
   <body>
+    <!-- SKIP LINK -->
+
+    <a href="#main-content" class="skip-link">
+      Saltar al contenido principal
+    </a>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+
+    <button id="scroll-top" aria-label="Volver arriba">↑</button>
+
+    <!-- HEADER -->
+
     <header>
       <nav aria-label="Navegación principal">
+        <!-- MENÚ HAMBURGUESA -->
+
+        <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- LOGO -->
+
         <a href="#inicio">
           <img
             src="./img/logo/logo-dark.png"
             alt="Logo de Twenty4 Fitness"
             class="logo"
             id="logo"
+            loading="lazy"
           />
         </a>
 
-        <button id="menu-toggle" aria-label="Abrir menú">
-           ☰
-        </button>
+        <!-- ENLACES -->
 
         <ul class="nav-links">
-  <li>
-    <a href="#inicio">Inicio</a>
-  </li>
+          <li>
+            <a href="#inicio">Inicio</a>
+          </li>
 
-  <li>
-    <a href="#nosotros">Nosotros</a>
-  </li>
+          <li>
+            <a href="#nosotros">Nosotros</a>
+          </li>
 
-  <li>
-    <a href="#beneficios">Beneficios</a>
-  </li>
+          <li>
+            <a href="#beneficios">Beneficios</a>
+          </li>
 
-  <li>
-    <a href="#planes">Planes</a>
-  </li>
+          <li>
+            <a href="#planes">Planes</a>
+          </li>
 
-  <li>
-    <a href="#galeria">Galería</a>
-  </li>
+          <li>
+            <a href="#galeria">Galería</a>
+          </li>
 
-  <li>
-    <a href="#horarios">Horarios</a>
-  </li>
+          <li>
+            <a href="#horarios">Horarios</a>
+          </li>
 
-  <li>
-    <a href="#reglamento">Reglamento</a>
-  </li>
+          <li>
+            <a href="#reglamento">Reglamento</a>
+          </li>
 
-  <li>
-    <a href="#contacto">Contacto</a>
-  </li>
-</ul>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+        </ul>
+
+        <!-- THEME -->
 
         <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
       </nav>
     </header>
 
-    <main>
-      <section id="inicio">
+    <!-- MAIN -->
+
+    <main id="main-content">
+      <!-- HERO -->
+
+      <div id="inicio" class="hero-section">
         <div class="container">
-          <article>
-            <h1>Twenty4 Fitness</h1>
+          <article class="hero-content">
+            <h1 id="hero-title">Twenty4 Fitness</h1>
 
             <p>
               Entrena sin límites en un ambiente moderno, motivador y diseñado
               para ayudarte a alcanzar tus objetivos.
             </p>
 
-            <a href="#planes">Ver planes</a>
+            <div class="hero-buttons">
+              <a href="#planes"> Ver planes </a>
 
-            <a href="#galeria">Nuestras instalaciones</a>
+              <a href="#galeria"> Nuestras instalaciones </a>
+            </div>
           </article>
         </div>
-      </section>
+      </div>
 
-      
-      <section id="nosotros">
+      <!-- SOBRE NOSOTROS -->
+
+<section
+  id="nosotros"
+  aria-labelledby="nosotros-title"
+>
   <div class="container nosotros-container">
-    <h2>Sobre Nosotros</h2>
+    <!-- IMAGEN -->
 
-    <div class="nosotros-line"></div>
+    <div class="nosotros-image">
+      <img
+        src="./img/nosotros/coach.jpg"
+        alt="Coach principal de Twenty4 Fitness"
+      />
+    </div>
 
-    <article class="nosotros-content">
-      <p>
-        Twenty4 Fitness fue creado en el año 2021 por Esteban Jimenez y Diego
-        Gamboa, con la iniciativa de construir un espacio fitness en La
-        Palmera, una zona donde no existía un gimnasio con este enfoque.
-      </p>
+    <!-- CONTENIDO -->
 
-      <p>
-        Luego de un año, el proyecto pasó a ser administrado completamente por
-        su actual propietario, manteniendo siempre el objetivo de ofrecer un
-        ambiente moderno, motivador y enfocado en la superación personal.
-      </p>
-    </article>
+    <div class="nosotros-content">
+      <span class="section-tag">
+        TWENTY4 FITNESS
+      </span>
 
-    <article class="coach-highlight">
-      <span class="coach-tag">Coach Principal</span>
+      <h2 id="nosotros-title">
+        Sobre Nosotros
+      </h2>
 
-      <p>
-        El coach principal cuenta con más de 11 años de experiencia en
-        entrenamiento físico y 4 años compitiendo en culturismo.
-      </p>
+      <!-- TEXTO -->
 
-      <p>
-        Además, posee formación en personal training, inducción al culturismo y
-        es campeón nacional en culturismo natural.
-      </p>
-    </article>
+      <div class="nosotros-text">
+        <p>
+          Twenty4 Fitness fue creado en el año 2021 por
+          Esteban Jimenez y Diego Gamboa, con la iniciativa
+          de construir un espacio fitness en La Palmera,
+          una zona donde no existía un gimnasio con este
+          enfoque.
+        </p>
+
+        <p>
+          Luego de un año, el proyecto pasó a ser
+          administrado completamente por su actual
+          propietario, manteniendo siempre el objetivo de
+          ofrecer un ambiente moderno, motivador y enfocado
+          en la superación personal.
+        </p>
+      </div>
+
+      <!-- INFO GYM -->
+
+      <div class="gym-info">
+        <strong>2021</strong>
+
+        <span>
+          Fundación del gimnasio
+        </span>
+      </div>
+
+      <!-- COACH -->
+
+      <div class="coach-section">
+        <span class="coach-label">
+          COACH PRINCIPAL
+        </span>
+
+        <h3>
+          Entrenamiento basado en experiencia real
+        </h3>
+
+        <p>
+          El coach principal cuenta con más de 11 años de
+          experiencia en entrenamiento físico y 4 años
+          compitiendo en culturismo natural.
+        </p>
+
+        <!-- SKILLS -->
+
+        <div class="coach-skills">
+          <article>
+            <strong>11+</strong>
+            <span>Años de experiencia</span>
+          </article>
+
+          <article>
+            <strong>4</strong>
+            <span>Años compitiendo</span>
+          </article>
+
+          <article>
+            <strong>Elite</strong>
+            <span>Entrenamiento profesional</span>
+          </article>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+</section>
 
-      <section id="beneficios">
+</section>
+      <!-- PLANES -->
+
+      <section id="planes" aria-labelledby="planes-title">
         <div class="container">
-          <h2>Beneficios</h2>
-
-          <div class="beneficios-container">
-            <article>
-              <h3>Equipamiento Moderno</h3>
-
-              <p>
-                Contamos con máquinas y espacios preparados para distintos tipos
-                de entrenamiento físico.
-              </p>
-            </article>
-
-            <article>
-              <h3>Ambiente Motivador</h3>
-
-              <p>
-                Creamos un entorno enfocado en disciplina, constancia y
-                superación personal.
-              </p>
-            </article>
-
-            <article>
-              <h3>Entrenamiento Funcional</h3>
-
-              <p>
-                Espacios diseñados para mejorar fuerza, resistencia y
-                acondicionamiento físico.
-              </p>
-            </article>
-
-            <article>
-              <h3>Atención Personalizada</h3>
-
-              <p>
-                Orientación y apoyo durante el proceso de entrenamiento dentro
-                del gimnasio.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="planes">
-        <div class="container">
-          <h2>Planes</h2>
+          <h2 id="planes-title">Planes</h2>
 
           <div class="planes-container">
             <!-- PLAN 1 -->
 
-            <article class="plan-card">
+            <article class="plan-card" tabindex="0">
               <h3>Sesión Diaria</h3>
 
               <p class="plan-price">₡2 000</p>
@@ -183,58 +242,62 @@
 
               <ul>
                 <li>✓ Acceso completo al gimnasio</li>
+
                 <li>✓ Uso de máquinas y cardio</li>
+
                 <li>✓ Acceso a lockers</li>
               </ul>
             </article>
 
-            <!-- PLAN 2 DESTACADO -->
+            <!-- PLAN GENERAL -->
 
-            <article class="plan-card featured-plan">
-              <span class="plan-badge">Popular </span>
+            <article class="plan-card featured-plan" tabindex="0">
+              <span class="plan-badge"> Popular </span>
 
-              <h3>Planes</h3>
+              <h3>Generales</h3>
 
               <p class="plan-price">₡18 000</p>
 
               <p class="plan-subtitle">Mensualidad general</p>
 
-              <!-- OPCIONES DE PLAN -->
-
               <div class="plan-options">
                 <div class="plan-option">
                   <span>Universitario</span>
+
                   <strong>₡16 000</strong>
                 </div>
 
                 <div class="plan-option">
                   <span>Estudiantil</span>
+
                   <strong>₡14 000</strong>
                 </div>
 
                 <div class="plan-option">
                   <span>Quincenal</span>
+
                   <strong>₡12 000</strong>
                 </div>
 
                 <div class="plan-option">
                   <span>Semanal</span>
+
                   <strong>₡10 000</strong>
                 </div>
               </div>
 
-              <!-- BENEFICIOS -->
-
               <ul>
                 <li>✓ Acceso completo al gimnasio</li>
+
                 <li>✓ Área de cardio y pesas</li>
+
                 <li>✓ Lockers y servicios sanitarios</li>
               </ul>
             </article>
 
-            <!-- PLAN 3 -->
+            <!-- PLAN PREMIUM -->
 
-            <article class="plan-card premium-plan">
+            <article class="plan-card premium-plan" tabindex="0">
               <span class="plan-badge premium-badge"> Premium </span>
 
               <h3>Plan Personal</h3>
@@ -245,10 +308,15 @@
 
               <ul>
                 <li>✓ 3 clases por semana</li>
+
                 <li>✓ Mensualidad incluida</li>
+
                 <li>✓ Rutina personalizada</li>
+
                 <li>✓ Seguimiento diario</li>
+
                 <li>✓ Evaluación mensual</li>
+
                 <li>✓ Acompañamiento completo</li>
               </ul>
             </article>
@@ -256,79 +324,91 @@
         </div>
       </section>
 
-      <section id="galeria">
+      <!-- GALERÍA -->
+
+      <section id="galeria" aria-labelledby="galeria-title">
         <div class="container">
-          <h2>Nuestras Instalaciones</h2>
+          <h2 id="galeria-title">Nuestras Instalaciones</h2>
 
           <div class="galeria-container">
-            <article>
+            <figure>
               <img
                 src="./img/galeria/gym-1.jpg"
                 alt="Área de pesas de Twenty4 Fitness"
+                loading="lazy"
               />
-            </article>
+            </figure>
 
-            <article>
+            <figure>
               <img
                 src="./img/galeria/gym-2.jpg"
                 alt="Máquinas de entrenamiento del gimnasio"
+                loading="lazy"
               />
-            </article>
+            </figure>
 
-            <article>
+            <figure>
               <img
                 src="./img/galeria/gym-3.jpg"
                 alt="Recepción principal de Twenty4 Fitness"
+                loading="lazy"
               />
-            </article>
+            </figure>
 
-            <article>
+            <figure>
               <img
                 src="./img/galeria/gym-4.jpg"
                 alt="Área de bicicletas y cardio"
+                loading="lazy"
               />
-            </article>
+            </figure>
 
-            <article>
+            <figure>
               <img
                 src="./img/galeria/gym-5.jpg"
                 alt="Zona de bebidas energéticas y snacks"
+                loading="lazy"
               />
-            </article>
+            </figure>
 
-            <article>
+            <figure>
               <img
                 src="./img/galeria/gym-6.jpg"
                 alt="Fachada exterior de Twenty4 Fitness"
+                loading="lazy"
               />
-            </article>
+            </figure>
           </div>
         </div>
       </section>
 
-      <section id="horarios">
+      <!-- HORARIOS -->
+
+      <section id="horarios" aria-labelledby="horarios-title">
         <div class="container">
-          <h2>Horarios</h2>
+          <h2 id="horarios-title">Horarios</h2>
 
           <div class="horarios-container">
-            <article class="horario-card">
+            <article class="horario-card" tabindex="0">
               <div class="horario-icon">
                 <i data-lucide="clock-3"></i>
               </div>
 
               <div class="horario-info">
                 <h3>Lunes a Viernes</h3>
+
                 <p>5:00 AM - 10:00 PM</p>
               </div>
             </article>
 
-            <article class="horario-card">
+            <article class="horario-card" tabindex="0">
               <div class="horario-icon">
                 <i data-lucide="calendar-days"></i>
               </div>
 
               <div class="horario-info">
                 <h3>Sábados y Feriados</h3>
+
                 <p>9:00 AM - 2:00 PM</p>
               </div>
             </article>
@@ -336,12 +416,14 @@
         </div>
       </section>
 
-      <section id="reglamento">
+      <!-- REGLAMENTO -->
+
+      <section id="reglamento" aria-labelledby="reglamento-title">
         <div class="container">
-          <h2>Reglamento General</h2>
+          <h2 id="reglamento-title">Reglamento General</h2>
 
           <div class="reglamento-container">
-            <article>
+            <article tabindex="0">
               <h3>Uso de Toalla</h3>
 
               <p>
@@ -350,7 +432,7 @@
               </p>
             </article>
 
-            <article>
+            <article tabindex="0">
               <h3>Limpieza de Equipos</h3>
 
               <p>
@@ -358,7 +440,7 @@
               </p>
             </article>
 
-            <article>
+            <article tabindex="0">
               <h3>Respeto y Disciplina</h3>
 
               <p>
@@ -367,7 +449,7 @@
               </p>
             </article>
 
-            <article>
+            <article tabindex="0">
               <h3>Cuidado del Equipo</h3>
 
               <p>
@@ -375,7 +457,7 @@
               </p>
             </article>
 
-            <article>
+            <article tabindex="0">
               <h3>Uso de Lockers</h3>
 
               <p>
@@ -387,142 +469,131 @@
         </div>
       </section>
 
-      <section id="contacto">
+      <!-- CONTACTO -->
 
-  <div class="container">
+      <section id="contacto" aria-labelledby="contacto-title">
+        <div class="container">
+          <h2 id="contacto-title">Contáctanos</h2>
 
-    <h2>Contáctanos</h2>
+          <p class="contact-description">
+            Puedes comunicarte con nosotros a través de nuestras redes sociales
+            o visitarnos directamente en nuestras instalaciones.
+          </p>
 
-    <p class="contact-description">
-      Puedes comunicarte con nosotros a través de nuestras redes sociales
-      o visitarnos directamente en nuestras instalaciones.
-    </p>
+          <div class="contacto-container">
+            <!-- WHATSAPP -->
 
-    <div class="contacto-container">
+            <article class="contact-card" tabindex="0">
+              <div class="contact-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
 
-      <!-- WHATSAPP -->
+              <div>
+                <h3>WhatsApp</h3>
 
-      <article class="contact-card">
+                <a
+                  href="https://wa.me/50662816453"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +506 6281 6453
+                </a>
+              </div>
+            </article>
 
-        <div class="contact-icon">
-          <i class="fa-brands fa-whatsapp"></i>
+            <!-- INSTAGRAM -->
+
+            <article class="contact-card" tabindex="0">
+              <div class="contact-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+
+              <div>
+                <h3>Instagram</h3>
+
+                <a
+                  href="https://www.instagram.com/twenty4_fitness"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @twenty4_fitness
+                </a>
+              </div>
+            </article>
+
+            <!-- FACEBOOK -->
+
+            <article class="contact-card" tabindex="0">
+              <div class="contact-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+
+              <div>
+                <h3>Facebook</h3>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=100064686981400"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twenty4 Fitness
+                </a>
+              </div>
+            </article>
+
+            <!-- UBICACIÓN -->
+
+            <article class="contact-card" tabindex="0">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div>
+                <h3>Ubicación</h3>
+
+                <address>La Palmera, San Carlos</address>
+              </div>
+            </article>
+          </div>
+
+          <!-- MAPA -->
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=Twenty4+Fitness+La+Palmera+San+Carlos&output=embed"
+              title="Ubicación de Twenty4 Fitness"
+              loading="lazy"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div>
-
-          <h3>WhatsApp</h3>
-
-          <a
-            href="https://wa.me/50662816453"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            +506 6281 6453
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- INSTAGRAM -->
-
-      <article class="contact-card">
-
-        <div class="contact-icon">
-          <i class="fa-brands fa-instagram"></i>
-        </div>
-
-        <div>
-
-          <h3>Instagram</h3>
-
-          <a
-            href="https://www.instagram.com/twenty4_fitness"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @twenty4_fitness
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- FACEBOOK -->
-
-      <article class="contact-card">
-
-        <div class="contact-icon">
-          <i class="fa-brands fa-facebook-f"></i>
-        </div>
-
-        <div>
-
-          <h3>Facebook</h3>
-
-          <a
-            href="https://www.facebook.com/profile.php?id=100064686981400"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twenty4 Fitness
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- UBICACIÓN -->
-
-      <article class="contact-card">
-
-        <div class="contact-icon">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-
-        <div>
-
-          <h3>Ubicación</h3>
-
-          <p>La Palmera, San Carlos</p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-    <!-- MAPA -->
-
-    <div class="map-container">
-
-      <iframe
-        src="https://www.google.com/maps?q=Twenty4+Fitness+La+Palmera+San+Carlos&output=embed"
-        title="Ubicación de Twenty4 Fitness"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-
-  </div>
-
-</section>
+    <!-- FOOTER -->
 
     <footer>
       <div class="container footer-container">
-        <article class="footer-brand">
+        <!-- BRAND -->
+
+        <div class="footer-brand">
           <img
             src="./img/logo/logo-dark.png"
             alt="Logo de Twenty4 Fitness"
             class="footer-logo"
             id="footer-logo"
+            loading="lazy"
           />
 
           <p>Disciplina • Constancia • Rendimiento</p>
-        </article>
+        </div>
 
-        <article class="footer-social">
+        <!-- SOCIAL -->
+
+        <section class="footer-social" aria-labelledby="social-title">
+          <h2 id="social-title" class="sr-only">Redes sociales</h2>
+
           <h3>Síguenos</h3>
 
           <div class="social-icons">
@@ -553,7 +624,7 @@
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
-        </article>
+        </section>
       </div>
 
       <p class="footer-copy">
@@ -561,9 +632,13 @@
       </p>
     </footer>
 
+    <!-- ICONOS -->
+
     <script>
       lucide.createIcons();
     </script>
+
+    <!-- JS -->
 
     <script src="./js/app.js"></script>
   </body>
