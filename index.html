@@ -131,19 +131,12 @@
   id="nosotros"
   aria-labelledby="nosotros-title"
 >
-  <div class="container nosotros-container">
-    <!-- IMAGEN -->
+  <div class="container">
 
-    <div class="nosotros-image">
-      <img
-        src="./img/nosotros/coach.jpg"
-        alt="Coach principal de Twenty4 Fitness"
-      />
-    </div>
+    <!-- HEADER -->
 
-    <!-- CONTENIDO -->
+    <div class="nosotros-header">
 
-    <div class="nosotros-content">
       <span class="section-tag">
         TWENTY4 FITNESS
       </span>
@@ -152,39 +145,52 @@
         Sobre Nosotros
       </h2>
 
-      <!-- TEXTO -->
+      <p class="nosotros-intro">
+        Twenty4 Fitness fue creado en el año 2021 por
+        Esteban Jimenez y Diego Gamboa con la iniciativa
+        de construir un espacio fitness en La Palmera,
+        una zona donde no existía un gimnasio con este
+        enfoque.
+      </p>
 
-      <div class="nosotros-text">
-        <p>
-          Twenty4 Fitness fue creado en el año 2021 por
-          Esteban Jimenez y Diego Gamboa, con la iniciativa
-          de construir un espacio fitness en La Palmera,
-          una zona donde no existía un gimnasio con este
-          enfoque.
-        </p>
+      <p class="nosotros-intro">
+        Actualmente el gimnasio continúa creciendo con el
+        objetivo de ofrecer un ambiente moderno,
+        motivador y enfocado en la superación personal.
+      </p>
 
-        <p>
-          Luego de un año, el proyecto pasó a ser
-          administrado completamente por su actual
-          propietario, manteniendo siempre el objetivo de
-          ofrecer un ambiente moderno, motivador y enfocado
-          en la superación personal.
-        </p>
-      </div>
-
-      <!-- INFO GYM -->
-
-      <div class="gym-info">
-        <strong>2021</strong>
+      <div class="gym-details">
 
         <span>
-          Fundación del gimnasio
+          Fundado en 2021
         </span>
+
+        <span class="detail-divider"></span>
+
+        <span>
+          La Palmera, San Carlos
+        </span>
+
       </div>
 
-      <!-- COACH -->
+    </div>
 
-      <div class="coach-section">
+    <!-- COACH -->
+
+    <div class="coach-card">
+
+      <div class="coach-image">
+
+        <img
+          src="./img/nosotros/coach.jpg"
+          alt="Coach principal de Twenty4 Fitness"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="coach-content">
+
         <span class="coach-label">
           COACH PRINCIPAL
         </span>
@@ -194,14 +200,13 @@
         </h3>
 
         <p>
-          El coach principal cuenta con más de 11 años de
-          experiencia en entrenamiento físico y 4 años
-          compitiendo en culturismo natural.
+          Más de 11 años de experiencia en entrenamiento
+          físico y 4 años compitiendo en culturismo
+          natural, en esta competencia se ha consolidado como campeon nacional.
         </p>
 
-        <!-- SKILLS -->
+        <div class="coach-stats">
 
-        <div class="coach-skills">
           <article>
             <strong>11+</strong>
             <span>Años de experiencia</span>
@@ -216,13 +221,99 @@
             <strong>Elite</strong>
             <span>Entrenamiento profesional</span>
           </article>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 </section>
 </section>
 
+<!-- BENEFICIOS -->
+
+<section
+  id="beneficios"
+  aria-labelledby="beneficios-title"
+>
+  <div class="container">
+
+    <span class="beneficios-tag">
+      ¿POR QUÉ ELEGIRNOS?
+    </span>
+
+    <h2 id="beneficios-title">
+      Beneficios
+    </h2>
+
+    <div class="beneficios-grid">
+
+      <article class="beneficio-card">
+        <i data-lucide="clock-3"></i>
+
+        <h3>Horario Amplio</h3>
+
+        <p>
+          Entrena en horarios flexibles que se adaptan a tu rutina diaria.
+        </p>
+      </article>
+
+      <article class="beneficio-card">
+        <i data-lucide="dumbbell"></i>
+
+        <h3>Equipamiento Moderno</h3>
+
+        <p>
+          Máquinas y herramientas diseñadas para un entrenamiento eficiente.
+        </p>
+      </article>
+
+      <article class="beneficio-card">
+        <i data-lucide="award"></i>
+
+        <h3>Coach Certificado</h3>
+
+        <p>
+          Asesoría basada en experiencia competitiva y entrenamiento profesional.
+        </p>
+      </article>
+
+      <article class="beneficio-card">
+        <i data-lucide="heart-pulse"></i>
+
+        <h3>Ambiente Motivador</h3>
+
+        <p>
+          Un entorno enfocado en disciplina, constancia y crecimiento personal.
+        </p>
+      </article>
+
+      <article class="beneficio-card">
+        <i data-lucide="lock-keyhole"></i>
+
+        <h3>Lockers y Servicios</h3>
+
+        <p>
+          Comodidades esenciales para que entrenes con tranquilidad.
+        </p>
+      </article>
+
+      <article class="beneficio-card">
+        <i data-lucide="users"></i>
+
+        <h3>Comunidad Fitness</h3>
+
+        <p>
+          Comparte metas y motivación con personas comprometidas con su progreso.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
 </section>
       <!-- PLANES -->
 
@@ -418,56 +509,110 @@
 
       <!-- REGLAMENTO -->
 
-      <section id="reglamento" aria-labelledby="reglamento-title">
-        <div class="container">
-          <h2 id="reglamento-title">Reglamento General</h2>
+      <section
+  id="reglamento"
+  aria-labelledby="reglamento-title"
+>
+  <div class="container">
 
-          <div class="reglamento-container">
-            <article tabindex="0">
-              <h3>Uso de Toalla</h3>
+    <span class="section-tag">
+      NORMAS DEL GIMNASIO
+    </span>
 
-              <p>
-                Es obligatorio utilizar una toalla personal durante el
-                entrenamiento.
-              </p>
-            </article>
+    <h2 id="reglamento-title">
+      Reglamento General
+    </h2>
 
-            <article tabindex="0">
-              <h3>Limpieza de Equipos</h3>
+    <p class="reglamento-intro">
+      Estas normas están diseñadas para garantizar
+      un ambiente seguro, ordenado y agradable
+      para todos nuestros miembros.
+    </p>
 
-              <p>
-                Cada máquina y accesorio debe limpiarse después de utilizarse.
-              </p>
-            </article>
+    <div class="reglamento-list">
 
-            <article tabindex="0">
-              <h3>Respeto y Disciplina</h3>
+      <article class="regla-item">
+        <span class="regla-numero">01</span>
 
-              <p>
-                No se permite lenguaje ofensivo ni conductas inapropiadas dentro
-                del gimnasio.
-              </p>
-            </article>
+        <div class="regla-contenido">
+          <h3>Uso responsable del equipo</h3>
 
-            <article tabindex="0">
-              <h3>Cuidado del Equipo</h3>
-
-              <p>
-                Todo equipo utilizado debe devolverse correctamente a su lugar.
-              </p>
-            </article>
-
-            <article tabindex="0">
-              <h3>Uso de Lockers</h3>
-
-              <p>
-                El uso de casilleros es gratuito, pero cada usuario es
-                responsable de sus pertenencias.
-              </p>
-            </article>
-          </div>
+          <p>
+            Limpie y acomode el equipo después de
+            cada uso para mantener el orden y la higiene.
+          </p>
         </div>
-      </section>
+      </article>
+
+      <article class="regla-item">
+        <span class="regla-numero">02</span>
+
+        <div class="regla-contenido">
+          <h3>Uso obligatorio de toalla</h3>
+
+          <p>
+            Utilice siempre una toalla personal
+            durante sus entrenamientos.
+          </p>
+        </div>
+      </article>
+
+      <article class="regla-item">
+        <span class="regla-numero">03</span>
+
+        <div class="regla-contenido">
+          <h3>Respeto y convivencia</h3>
+
+          <p>
+            Mantenga una actitud respetuosa hacia
+            los demás usuarios y colaboradores.
+          </p>
+        </div>
+      </article>
+
+      <article class="regla-item">
+        <span class="regla-numero">04</span>
+
+        <div class="regla-contenido">
+          <h3>Seguridad</h3>
+
+          <p>
+            Utilice los equipos de acuerdo con las
+            indicaciones del personal.
+          </p>
+        </div>
+      </article>
+
+      <article class="regla-item">
+        <span class="regla-numero">05</span>
+
+        <div class="regla-contenido">
+          <h3>Objetos personales</h3>
+
+          <p>
+            Twenty4 Fitness no se hace responsable
+            por objetos olvidados o extraviados.
+          </p>
+        </div>
+      </article>
+
+      <article class="regla-item">
+        <span class="regla-numero">06</span>
+
+        <div class="regla-contenido">
+          <h3>Vestimenta adecuada</h3>
+
+          <p>
+            Es obligatorio utilizar ropa y calzado
+            deportivo apropiado para entrenar.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
 
       <!-- CONTACTO -->
 

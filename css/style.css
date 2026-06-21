@@ -390,284 +390,320 @@ nav a:hover::after {
 /* ========================================= */
 
 #nosotros {
-  position: relative;
+  background:
+    linear-gradient(
+      to bottom,
+      #0b0b0b,
+      #111111
+    );
+
+  padding: 8rem 0;
+}
+
+.nosotros-header {
+  max-width: 900px;
+
+  margin: 0 auto 6rem;
+
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+
+  padding: .8rem 1.5rem;
+
+  border-radius: 999px;
+
+  background-color: rgba(255,77,94,.1);
+
+  color: var(--color-primary);
+
+  font-size: .8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 1.5rem;
+}
+
+.nosotros-header h2 {
+  font-size: 4.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.nosotros-intro {
+  font-size: 1.25rem;
+
+  line-height: 2.1;
+
+  color: var(--color-text-secondary);
+
+  max-width: 800px;
+
+  margin:
+    0 auto
+    2rem;
+}
+
+.gym-details {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-top: 3rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+}
+
+.detail-divider {
+  width: 40px;
+
+  height: 2px;
+
+  background-color: var(--color-primary);
+}
+
+/* ========================================= */
+/* COACH CARD */
+/* ========================================= */
+
+.coach-card {
+  display: grid;
+
+  grid-template-columns: 400px 1fr;
+
+  gap: 4rem;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28,28,28,.95),
+      rgba(15,15,15,1)
+    );
+
+  border-radius: 32px;
 
   overflow: hidden;
 
-  background-color: #050505;
+  border: 1px solid rgba(255,255,255,.06);
 
-  padding: 7rem 0 6rem;
-
-  margin-top: 4rem;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.4);
 }
 
-/* CONTENEDOR */
-
-.nosotros-container {
-  display: grid;
-
-  grid-template-columns: 52% 48%;
-
-  align-items: stretch;
-
-  min-height: 780px;
-}
-
-/* ========================================= */
-/* IMAGEN */
-/* ========================================= */
-
-.nosotros-image {
-  position: relative;
-
+.coach-image {
   height: 100%;
 }
 
-.nosotros-image img {
+.coach-image img {
   width: 100%;
 
   height: 100%;
 
   object-fit: cover;
 
-  object-position: center;
-
   display: block;
 }
 
-/* DIFUMINADO */
-
-.nosotros-image::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to right,
-      rgba(5,5,5,0) 50%,
-      rgba(5,5,5,0.45) 70%,
-      rgba(5,5,5,0.85) 88%,
-      rgba(5,5,5,1) 100%
-    );
-}
-
-/* ========================================= */
-/* CONTENIDO */
-/* ========================================= */
-
-.nosotros-content {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  padding: 5rem 5rem 5rem 4rem;
-}
-
-/* TAG */
-
-.section-tag {
-  display: inline-block;
-
-  width: fit-content;
-
-  margin-bottom: 1.5rem;
-
-  padding: 0.8rem 1.5rem;
-
-  border-radius: 999px;
-
-  background-color: rgba(255, 77, 94, 0.12);
-
-  color: var(--color-primary);
-
-  font-size: 0.8rem;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-/* TITULO */
-
-.nosotros-content h2 {
-  font-size: 5rem;
-
-  line-height: 0.95;
-
-  margin-bottom: 3rem;
-
-  text-align: left;
-}
-
-/* TEXTO */
-
-.nosotros-text {
-  margin-bottom: 3rem;
-}
-
-.nosotros-text p {
-  font-size: 1.12rem;
-
-  line-height: 2.1;
-
-  color: var(--color-text-secondary);
-
-  margin-bottom: 2rem;
-}
-
-/* INFO GYM */
-
-.gym-info {
-  margin-bottom: 3.5rem;
-}
-
-.gym-info strong {
-  display: block;
-
-  font-size: 4rem;
-
-  color: var(--color-primary);
-
-  margin-bottom: 0.5rem;
-}
-
-.gym-info span {
-  color: var(--color-text-secondary);
-
-  font-size: 1rem;
-}
-
-/* ========================================= */
-/* COACH */
-/* ========================================= */
-
-.coach-section {
-  border-left: 4px solid var(--color-primary);
-
-  padding-left: 2rem;
+.coach-content {
+  padding: 4rem;
 }
 
 .coach-label {
-  display: inline-block;
-
-  margin-bottom: 1.2rem;
-
   color: var(--color-primary);
 
-  font-size: 0.9rem;
+  font-size: .85rem;
 
   font-weight: 700;
 
   letter-spacing: 2px;
 }
 
-.coach-section h3 {
-  font-size: 2.8rem;
+.coach-content h3 {
+  font-size: 2.5rem;
 
-  line-height: 1.15;
-
-  margin-bottom: 2rem;
-
-  max-width: 500px;
+  margin:
+    1rem 0
+    1.5rem;
 }
 
-.coach-section p {
+.coach-content p {
+  color: var(--color-text-secondary);
+
   font-size: 1.05rem;
 
   line-height: 2;
-
-  color: var(--color-text-secondary);
-
-  margin-bottom: 3rem;
 }
 
-/* SKILLS */
-
-.coach-skills {
+.coach-stats {
   display: flex;
 
   gap: 3rem;
 
+  margin-top: 3rem;
+
   flex-wrap: wrap;
 }
 
-.coach-skills article {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 0.6rem;
-}
-
-.coach-skills strong {
-  font-size: 2.3rem;
+.coach-stats strong {
+  display: block;
 
   color: var(--color-primary);
+
+  font-size: 2.2rem;
+
+  margin-bottom: .5rem;
 }
 
-.coach-skills span {
+.coach-stats span {
   color: var(--color-text-secondary);
-
-  font-size: 0.95rem;
-}
-
-/* ========================================= */
-/* LIGHT MODE */
-/* ========================================= */
-
-body.light-mode #nosotros {
-  background-color: #f5f5f5;
-}
-
-body.light-mode .nosotros-image::after {
-  background:
-    linear-gradient(
-      to right,
-      rgba(255,255,255,0) 50%,
-      rgba(245,245,245,0.45) 70%,
-      rgba(245,245,245,0.85) 88%,
-      rgba(245,245,245,1) 100%
-    );
-}
-
-body.light-mode .section-tag {
-  background-color: rgba(255, 77, 94, 0.1);
 }
 
 /* ========================================= */
 /* BENEFICIOS */
 /* ========================================= */
 
-#beneficios h2,
-#planes h2,
-#galeria h2,
-#horarios h2,
-#contacto h2,
-#reglamento h2 {
+#beneficios {
+  background:
+    linear-gradient(
+      to bottom,
+      #0a0a0a,
+      #111111
+    );
+}
+
+.beneficios-header {
   text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 4rem;
+}
+
+.beneficios-header p {
+  font-size: 1.1rem;
+
+  color: var(--color-text-secondary);
+
+  margin-top: 1rem;
 }
 
 .beneficios-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+
+  margin-top: 4rem;
+}
+
+.beneficio-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 25, 25, 0.98),
+      rgba(12, 12, 12, 1)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 18px;
+
+  padding: 2.2rem 1.8rem;
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.beneficio-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--color-primary);
+
+  transform: scaleX(0);
+
+  transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover::before {
+  transform: scaleX(1);
+}
+
+.beneficio-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(255, 77, 94, 0.25);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(255, 77, 94, 0.08);
+}
+
+.beneficio-icon {
+  width: 75px;
+
+  height: 75px;
+
+  margin: 0 auto 1.5rem;
+
+  border-radius: 50%;
+
   display: flex;
 
-  gap: 2rem;
-
-  flex-wrap: wrap;
+  align-items: center;
 
   justify-content: center;
 
-  margin-top: 3rem;
+  background-color: rgba(255, 77, 94, 0.08);
+
+  color: var(--color-primary);
+
+  font-size: 2rem;
 }
 
-.beneficios-container article {
-  width: 250px;
+.beneficio-card h3 {
+  color: var(--color-text);
+
+  font-size: 1.2rem;
+
+  margin-bottom: 1rem;
 }
 
+.beneficio-card p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
 /* ========================================= */
 /* TARJETAS GENERALES */
 /* ========================================= */
@@ -1292,38 +1328,59 @@ footer h3 {
 /* ========================================= */
 
 body.light-mode {
-  --color-background: #f5f5f5;
-  --color-surface: #ffffff;
+  --color-background: #dde2e6;
+  --color-surface: #eceff1;
 
   --color-text: #111111;
-  --color-text-secondary: #444444;
+  --color-text-secondary: #4f565c;
 
-  background: radial-gradient(circle at top, #ffffff 0%, #f2f2f2 45%);
+  background:
+    radial-gradient(
+      circle at top,
+      #eef1f3 0%,
+      #dde2e6 100%
+    );
 }
 
+/* ========================================= */
 /* HEADER */
+/* ========================================= */
 
 body.light-mode header {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(18px);
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
+/* ========================================= */
 /* NAVBAR */
+/* ========================================= */
 
 body.light-mode nav a {
-  color: #111111;
+  color: #1a1a1a;
 }
 
+body.light-mode nav a:hover {
+  color: var(--color-primary);
+}
+
+/* ========================================= */
 /* HERO */
+/* ========================================= */
 
 body.light-mode #inicio::before {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.88),
-    rgba(255, 255, 255, 0.72),
-    rgba(255, 255, 255, 0.45)
-  );
+  background:
+    linear-gradient(
+      to right,
+      rgba(248, 249, 250, 0.40),
+      rgba(248, 249, 250, 0.20),
+      rgba(248, 249, 250, 0.08)
+    );
 }
 
 body.light-mode #inicio h1 {
@@ -1331,31 +1388,97 @@ body.light-mode #inicio h1 {
 }
 
 body.light-mode #inicio p {
-  color: #222222;
+  color: #111111;
+
+  font-size: 1.5rem;
+
+  font-weight: 500;
+
+  text-shadow:
+    0 2px 8px rgba(255, 255, 255, 0.95),
+    0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* BLUR SOLO PARA MODO LIGHT */
+
+body.light-mode #inicio article {
+  position: relative;
+
+  max-width: 800px;
+
+  padding: 3rem;
+
+  z-index: 1;
+}
+
+body.light-mode #inicio article::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -40px;
+
+  z-index: -1;
+
+  border-radius: 20%;
+
+  backdrop-filter: blur(0.2px);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.30) 0%,
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 55%
+    );
 }
 
 body.light-mode #inicio a:last-of-type {
-  border: 1px solid #111111;
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
 
   color: #111111;
 }
 
-/* SECCIONES */
+/* ========================================= */
+/* FONDOS SECCIONES */
+/* ========================================= */
 
-body.light-mode #nosotros,
-body.light-mode #galeria,
+body.light-mode #nosotros {
+  background: #edf0f2;
+}
+
+body.light-mode #beneficios {
+  background: #e4e8ec;
+}
+
+body.light-mode #planes {
+  background: #edf0f2;
+}
+
+body.light-mode #galeria {
+  background: #e4e8ec;
+}
+
+body.light-mode #horarios {
+  background: #edf0f2;
+}
+
 body.light-mode #reglamento {
-  background-color: #f4f4f4;
+  background: #e4e8ec;
 }
 
-body.light-mode #beneficios,
-body.light-mode #planes,
-body.light-mode #horarios,
 body.light-mode #contacto {
-  background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+  background: #edf0f2;
 }
 
-/* TITULOS */
+/* ========================================= */
+/* TITULOS GENERALES */
+/* ========================================= */
 
 body.light-mode section h2 {
   color: #111111;
@@ -1365,22 +1488,103 @@ body.light-mode h3 {
   color: var(--color-primary);
 }
 
-/* THEME BUTTON */
+body.light-mode p {
+  color: #4f565c;
+}
+
+/* ========================================= */
+/* BOTON TEMA */
+/* ========================================= */
 
 body.light-mode #theme-toggle {
-  border: 1px solid #111111;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 
   color: #111111;
 }
 
+/* ========================================= */
+/* SOBRE NOSOTROS */
+/* ========================================= */
+
+body.light-mode .section-tag {
+  background-color: rgba(255, 77, 94, 0.12);
+
+  color: #d93447;
+}
+
+body.light-mode .nosotros-intro,
+body.light-mode .gym-details,
+body.light-mode .coach-content p,
+body.light-mode .coach-stats span {
+  color: #101112;
+}
+
+body.light-mode .coach-card {
+  background:
+    linear-gradient(
+      145deg,
+      #e5e9ec,
+      #d6dde2
+    );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .coach-content h3 {
+  color: #111111;
+}
+
+/* ========================================= */
+/* BENEFICIOS */
+/* ========================================= */
+
+body.light-mode .beneficio-card {
+  background:
+    linear-gradient(
+      145deg,
+      #e5e9ec,
+      #d6dde2
+    );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .beneficio-card h3 {
+  color: #111111;
+}
+
+body.light-mode .beneficio-card p {
+  color: #4f565c;
+}
+
+body.light-mode .beneficio-icon {
+  background-color: rgba(255, 77, 94, 0.1);
+
+  color: var(--color-primary);
+}
+
+/* ========================================= */
 /* PLANES */
+/* ========================================= */
 
 body.light-mode .plan-card {
-  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  background:
+    linear-gradient(
+      145deg,
+      #dde2e6,
+      #cfd6db
+    );
 
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.10);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 body.light-mode .plan-price {
@@ -1390,35 +1594,65 @@ body.light-mode .plan-price {
 body.light-mode .plan-card li,
 body.light-mode .plan-subtitle,
 body.light-mode .plan-option span {
-  color: #444444;
+  color: #42484d;
 }
 
 body.light-mode .plan-options {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 body.light-mode .plan-option strong {
   color: #111111;
 }
 
+/* ========================================= */
 /* HORARIOS */
+/* ========================================= */
 
 body.light-mode .horario-card {
-  background: linear-gradient(145deg, #ffffff, #f4f4f4);
-
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* CONTACTO */
-
-body.light-mode .contact-card {
-  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  background:
+    linear-gradient(
+      145deg,
+      #e5e9ec,
+      #d6dde2
+    );
 
   border: 1px solid rgba(0, 0, 0, 0.08);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .horario-info h3 {
+  color: #111111;
+}
+
+body.light-mode .horario-info p {
+  color: #4f565c;
+}
+
+body.light-mode .horario-icon {
+  background-color: rgba(255, 77, 94, 0.1);
+}
+
+/* ========================================= */
+/* CONTACTO */
+/* ========================================= */
+
+body.light-mode .contact-card {
+  background:
+    linear-gradient(
+      145deg,
+      #e5e9ec,
+      #d6dde2
+    );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 body.light-mode .contact-card h3 {
@@ -1427,40 +1661,51 @@ body.light-mode .contact-card h3 {
 
 body.light-mode .contact-card a,
 body.light-mode .contact-card p {
-  color: #444444;
+  color: #060707;
 }
 
 body.light-mode .contact-icon {
-  background-color: rgba(255, 77, 94, 0.12);
+  background-color: rgba(255, 77, 94, 0.1);
 }
 
+/* ========================================= */
+/* GALERIA */
+/* ========================================= */
+
+body.light-mode .galeria-container article,
+body.light-mode .galeria-container figure {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================= */
 /* FOOTER */
+/* ========================================= */
 
 body.light-mode footer {
-  background: linear-gradient(to bottom, #f2f2f2, #e9e9e9);
+  background:
+    linear-gradient(
+      to bottom,
+      #dfe4e8,
+      #d1d7dc
+    );
 
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 body.light-mode .footer-copy,
 body.light-mode .footer-brand p {
-  color: #444444;
+  color: #4f565c;
 }
 
 body.light-mode .social-icons a {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  color: #111111;
 }
 
-/* NOSOTROS */
-
-body.light-mode .coach-highlight {
-  background: #ffffff;
-
-  border: 1px solid #e5e5e5;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+body.light-mode .social-icons a:hover {
+  color: white;
 }
-
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
@@ -1667,4 +1912,70 @@ body.light-mode .coach-highlight {
 
 #scroll-top:hover {
   transform: translateY(-5px);
+}
+
+/* ========================================= */
+/* REGLAMENTO PREMIUM */
+/* ========================================= */
+
+.reglamento-intro {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin:
+    0 auto
+    4rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.1rem;
+}
+
+.reglamento-list {
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+.regla-item {
+  display: flex;
+
+  gap: 2rem;
+
+  align-items: flex-start;
+
+  padding: 2.5rem 0;
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  transition: all .3s ease;
+}
+
+.regla-item:hover {
+  transform: translateX(8px);
+}
+
+.regla-numero {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  color: rgba(238, 21, 43, 0.25);
+
+  min-width: 80px;
+}
+
+.regla-contenido h3 {
+  margin-bottom: 1rem;
+
+  color: var(--color-primary);
+
+  font-size: 1.4rem;
+}
+
+.regla-contenido p {
+  color: var(--color-text-secondary);
+
+  line-height: 1.8;
 }
