@@ -1979,3 +1979,272 @@ body.light-mode .social-icons a:hover {
 
   line-height: 1.8;
 }
+
+/* ========================================= */
+/* ACCESIBILIDAD */
+/* ========================================= */
+
+.accessibility-container {
+  position: relative;
+}
+
+#accessibility-toggle {
+  width: 52px;
+  height: 52px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+.accessibility-panel {
+  position: absolute;
+
+  top: 75px;
+
+  right: 0;
+
+  width: 420px;
+
+  padding: 2rem;
+
+  border-radius: 30px;
+
+  background: var(--color-surface);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.25);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: 0.3s;
+
+  z-index: 9999;
+}
+
+.accessibility-panel.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+.accessibility-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.accessibility-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.accessibility-title i {
+  font-size: 2rem;
+
+  color: var(--color-primary);
+}
+
+.accessibility-option {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin: 2rem 0;
+}
+
+.option-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  font-size: 1.1rem;
+}
+
+.option-info i,
+.text-icon {
+  font-size: 2rem;
+
+  color: var(--color-primary);
+}
+
+.accessibility-option button {
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 18px;
+
+  border: none;
+
+  background: rgba(255,255,255,0.08);
+
+  color: var(--color-primary);
+
+  font-size: 2rem;
+
+  cursor: pointer;
+}
+
+#close-accessibility {
+  width: auto;
+  height: auto;
+
+  background: transparent;
+
+  font-size: 2rem;
+}
+
+/* SWITCH */
+
+.switch {
+  position: relative;
+
+  width: 60px;
+
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+
+  inset: 0;
+
+  background: #ccc;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 26px;
+  height: 26px;
+
+  left: 4px;
+  top: 4px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  transition: .3s;
+}
+
+.switch input:checked + .slider {
+  background: var(--color-primary);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
+/* ========================================= */
+/* CONTROL DE TAMAÑO DE FUENTE */
+/* ========================================= */
+
+.font-size-control {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.8rem;
+
+  padding: 1rem;
+
+  border-radius: 14px;
+
+  background-color: rgba(255,255,255,0.05);
+}
+
+.font-size-control label {
+  font-weight: 600;
+
+  color: var(--color-text);
+}
+
+#font-slider {
+  width: 100%;
+
+  cursor: pointer;
+
+  accent-color: var(--color-primary);
+}
+
+#font-value {
+  text-align: center;
+
+  font-weight: bold;
+
+  color: var(--color-primary);
+}
+
+body.high-contrast:not(.light-mode) {
+  --color-background: #000;
+  --color-surface: #111;
+  --color-text: #fff;
+  --color-text-secondary: #f0f0f0;
+}
+
+body.light-mode.high-contrast {
+  --color-background: #ffffff;
+  --color-surface: #f0f0f0;
+  --color-text: #000000;
+  --color-text-secondary: #000000;
+}
+
+body.high-contrast * {
+  text-shadow: none !important;
+}
+
+body.high-contrast a,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast span {
+  color: var(--color-text) !important;
+}
+
+body.high-contrast .plan-card,
+body.high-contrast .beneficio-card,
+body.high-contrast .contact-card,
+body.high-contrast .horario-card,
+body.high-contrast .coach-card {
+  border: 3px solid var(--color-primary) !important;
+}
+
+html {
+  transition: font-size 0.3s ease;
+}

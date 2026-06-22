@@ -4,9 +4,9 @@
   <head>
     <!-- METADATOS -->
 
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- TÍTULO -->
 
@@ -107,11 +107,126 @@
           </li>
         </ul>
 
-        <!-- CAMBIO DE TEMA -->
+        <!-- Accesibilidad -->
 
-        <button id="theme-toggle" type="button" aria-label="Cambiar tema">
-          🌙
-        </button>
+        <!-- ========================================= -->
+        <!-- PANEL DE ACCESIBILIDAD -->
+        <!-- ========================================= -->
+
+        <div class="accessibility-container">
+          <button
+            id="accessibility-toggle"
+            aria-label="Abrir opciones de accesibilidad"
+            aria-expanded="false"
+            type="button"
+          >
+            <i class="fa-solid fa-universal-access"></i>
+          </button>
+
+          <aside
+            id="accessibility-panel"
+            class="accessibility-panel"
+            aria-label="Opciones de accesibilidad"
+          >
+            <div class="accessibility-header">
+              <div class="accessibility-title">
+                <i class="fa-solid fa-universal-access"></i>
+
+                <h3>Accesibilidad</h3>
+              </div>
+
+              <button
+                id="close-accessibility"
+                type="button"
+                aria-label="Cerrar panel"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <hr />
+
+            <!-- Tema -->
+
+            <div class="accessibility-option">
+              <div class="option-info">
+                <i class="fa-solid fa-moon"></i>
+
+                <span>Modo oscuro / claro</span>
+              </div>
+
+              <button id="theme-toggle" type="button" aria-label="Cambiar tema">
+                🌙
+              </button>
+            </div>
+
+            <!-- Alto contraste -->
+
+            <div class="accessibility-option">
+              <div class="option-info">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+
+                <span>Alto contraste</span>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" id="contrast-toggle" />
+
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Lectura -->
+
+            <div class="accessibility-option">
+              <div class="option-info">
+                <i class="fa-solid fa-volume-high"></i>
+
+                <span>Leer en voz alta</span>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" id="read-page" />
+
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <hr />
+
+            <!-- Texto -->
+
+            <div class="accessibility-option">
+              <div class="option-info">
+                <span class="text-icon">A+</span>
+
+                <span>Aumentar texto</span>
+              </div>
+
+              <button id="increase-font" type="button">+</button>
+            </div>
+
+            <div class="accessibility-option">
+              <div class="option-info">
+                <span class="text-icon">A−</span>
+
+                <span>Disminuir texto</span>
+              </div>
+
+              <button id="decrease-font" type="button">−</button>
+            </div>
+
+            <div class="accessibility-option">
+              <div class="option-info">
+                <span class="text-icon">A</span>
+
+                <span>Tamaño normal</span>
+              </div>
+
+              <button id="reset-font" type="button">↺</button>
+            </div>
+          </aside>
+        </div>
       </nav>
     </header>
 
