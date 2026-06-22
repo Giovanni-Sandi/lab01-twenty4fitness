@@ -2,9 +2,13 @@
 
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <!-- METADATOS -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    <!-- TÍTULO -->
 
     <title>Twenty4 Fitness</title>
 
@@ -19,7 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <!-- CSS -->
+    <!-- ESTILOS -->
 
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -27,7 +31,7 @@
   </head>
 
   <body>
-    <!-- SKIP LINK -->
+    <!-- ENLACE DE ACCESIBILIDAD -->
 
     <a href="#main-content" class="skip-link">
       Saltar al contenido principal
@@ -35,15 +39,23 @@
 
     <!-- BOTÓN VOLVER ARRIBA -->
 
-    <button id="scroll-top" aria-label="Volver arriba">↑</button>
+    <button id="scroll-top" type="button" aria-label="Volver arriba">↑</button>
 
-    <!-- HEADER -->
+    <!-- ENCABEZADO -->
 
     <header>
+      <!-- NAVEGACIÓN -->
+
       <nav aria-label="Navegación principal">
         <!-- MENÚ HAMBURGUESA -->
 
-        <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
           ☰
         </button>
 
@@ -59,9 +71,9 @@
           />
         </a>
 
-        <!-- ENLACES -->
+        <!-- MENÚ -->
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="menu-principal">
           <li>
             <a href="#inicio">Inicio</a>
           </li>
@@ -95,19 +107,23 @@
           </li>
         </ul>
 
-        <!-- THEME -->
+        <!-- CAMBIO DE TEMA -->
 
-        <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        <button id="theme-toggle" type="button" aria-label="Cambiar tema">
+          🌙
+        </button>
       </nav>
     </header>
 
-    <!-- MAIN -->
+    <!-- CONTENIDO PRINCIPAL -->
 
     <main id="main-content">
       <!-- HERO -->
 
       <div id="inicio" class="hero-section">
         <div class="container">
+          <!-- CONTENIDO HERO -->
+
           <article class="hero-content">
             <h1 id="hero-title">Twenty4 Fitness</h1>
 
@@ -115,6 +131,8 @@
               Entrena sin límites en un ambiente moderno, motivador y diseñado
               para ayudarte a alcanzar tus objetivos.
             </p>
+
+            <!-- BOTONES -->
 
             <div class="hero-buttons">
               <a href="#planes"> Ver planes </a>
@@ -127,201 +145,195 @@
 
       <!-- SOBRE NOSOTROS -->
 
-<section
-  id="nosotros"
-  aria-labelledby="nosotros-title"
->
-  <div class="container">
+      <section id="nosotros" aria-labelledby="nosotros-title">
+        <div class="container">
+          <!-- ENCABEZADO -->
 
-    <!-- HEADER -->
+          <div class="nosotros-header" tabindex="0">
+            <span class="section-tag"> TWENTY4 FITNESS </span>
 
-    <div class="nosotros-header" tabindex="0">
+            <h2 id="nosotros-title">Sobre Nosotros</h2>
 
-      <span class="section-tag">
-        TWENTY4 FITNESS
-      </span>
+            <p class="nosotros-intro">
+              Twenty4 Fitness fue creado en el año 2021 por Esteban Jimenez y
+              Diego Gamboa con la iniciativa de construir un espacio fitness en
+              La Palmera, una zona donde no existía un gimnasio con este
+              enfoque.
+            </p>
 
-      <h2 id="nosotros-title">
-        Sobre Nosotros
-      </h2>
+            <p class="nosotros-intro">
+              Actualmente el gimnasio continúa creciendo con el objetivo de
+              ofrecer un ambiente moderno, motivador y enfocado en la superación
+              personal.
+            </p>
 
-      <p class="nosotros-intro">
-        Twenty4 Fitness fue creado en el año 2021 por
-        Esteban Jimenez y Diego Gamboa con la iniciativa
-        de construir un espacio fitness en La Palmera,
-        una zona donde no existía un gimnasio con este
-        enfoque.
-      </p>
+            <!-- DATOS -->
 
-      <p class="nosotros-intro">
-        Actualmente el gimnasio continúa creciendo con el
-        objetivo de ofrecer un ambiente moderno,
-        motivador y enfocado en la superación personal.
-      </p>
+            <div class="gym-details">
+              <span> Fundado en 2021 </span>
 
-      <div class="gym-details">
+              <span class="detail-divider"></span>
 
-        <span>
-          Fundado en 2021
-        </span>
+              <span> La Palmera, San Carlos </span>
+            </div>
+          </div>
 
-        <span class="detail-divider"></span>
+          <!-- COACH -->
 
-        <span>
-          La Palmera, San Carlos
-        </span>
+          <div class="coach-card" tabindex="0">
+            <!-- IMAGEN -->
 
-      </div>
+            <div class="coach-image">
+              <img
+                src="./img/nosotros/coach.jpg"
+                alt="Coach principal de Twenty4 Fitness"
+                loading="lazy"
+              />
+            </div>
 
-    </div>
+            <!-- INFORMACIÓN -->
 
-    <!-- COACH -->
+            <div class="coach-content">
+              <span class="coach-label"> COACH PRINCIPAL </span>
 
-    <div class="coach-card" tabindex="0">
+              <h3>Entrenamiento basado en experiencia real</h3>
 
-      <div class="coach-image">
+              <p>
+                Más de 11 años de experiencia en entrenamiento físico y 4 años
+                compitiendo en culturismo natural, en esta competencia se ha
+                consolidado como campeon nacional.
+              </p>
 
-        <img
-          src="./img/nosotros/coach.jpg"
-          alt="Coach principal de Twenty4 Fitness"
-          loading="lazy"
-        >
+              <!-- ESTADÍSTICAS -->
 
-      </div>
+              <div class="coach-stats">
+                <div>
+                  <strong>11+</strong>
 
-      <div class="coach-content">
+                  <span>Años de experiencia</span>
+                </div>
 
-        <span class="coach-label">
-          COACH PRINCIPAL
-        </span>
+                <div>
+                  <strong>4</strong>
 
-        <h3>
-          Entrenamiento basado en experiencia real
-        </h3>
+                  <span>Años compitiendo</span>
+                </div>
 
-        <p>
-          Más de 11 años de experiencia en entrenamiento
-          físico y 4 años compitiendo en culturismo
-          natural, en esta competencia se ha consolidado como campeon nacional.
-        </p>
+                <div>
+                  <strong>Elite</strong>
 
-        <div class="coach-stats">
-
-          <article>
-            <strong>11+</strong>
-            <span>Años de experiencia</span>
-          </article>
-
-          <article>
-            <strong>4</strong>
-            <span>Años compitiendo</span>
-          </article>
-
-          <article>
-            <strong>Elite</strong>
-            <span>Entrenamiento profesional</span>
-          </article>
-
+                  <span>Entrenamiento profesional</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
+      <!-- BENEFICIOS -->
 
-    </div>
+      <section id="beneficios" aria-labelledby="beneficios-title">
+        <div class="container">
+          <!-- ETIQUETA -->
 
-  </div>
-</section>
+          <span class="beneficios-tag"> ¿POR QUÉ ELEGIRNOS? </span>
 
-<!-- BENEFICIOS -->
+          <!-- TÍTULO -->
 
-<section
-  id="beneficios"
-  aria-labelledby="beneficios-title"
->
-  <div class="container">
+          <h2 id="beneficios-title">Beneficios</h2>
 
-    <span class="beneficios-tag">
-      ¿POR QUÉ ELEGIRNOS?
-    </span>
+          <!-- TARJETAS -->
 
-    <h2 id="beneficios-title">
-      Beneficios
-    </h2>
+          <div class="beneficios-grid">
+            <!-- TARJETA -->
 
-    <div class="beneficios-grid">
+            <article class="beneficio-card" tabindex="0">
+              <i data-lucide="clock-3"></i>
 
-      <article class="beneficio-card" tabindex="0">
-        <i data-lucide="clock-3"></i>
+              <h3>Horario Amplio</h3>
 
-        <h3>Horario Amplio</h3>
+              <p>
+                Entrena en horarios flexibles que se adaptan a tu rutina diaria.
+              </p>
+            </article>
 
-        <p>
-          Entrena en horarios flexibles que se adaptan a tu rutina diaria.
-        </p>
-      </article>
+            <!-- TARJETA -->
 
-      <article class="beneficio-card" tabindex="0">
-        <i data-lucide="dumbbell"></i>
+            <article class="beneficio-card" tabindex="0">
+              <i data-lucide="dumbbell"></i>
 
-        <h3>Equipamiento Moderno</h3>
+              <h3>Equipamiento Moderno</h3>
 
-        <p>
-          Máquinas y herramientas diseñadas para un entrenamiento eficiente.
-        </p>
-      </article>
+              <p>
+                Máquinas y herramientas diseñadas para un entrenamiento
+                eficiente.
+              </p>
+            </article>
 
-      <article class="beneficio-card" tabindex="0">
-        <i data-lucide="award"></i>
+            <!-- TARJETA -->
 
-        <h3>Coach Certificado</h3>
+            <article class="beneficio-card" tabindex="0">
+              <i data-lucide="award"></i>
 
-        <p>
-          Asesoría basada en experiencia competitiva y entrenamiento profesional.
-        </p>
-      </article>
+              <h3>Coach Certificado</h3>
 
-      <article class="beneficio-card" tabindex="0">
-        <i data-lucide="heart-pulse"></i>
+              <p>
+                Asesoría basada en experiencia competitiva y entrenamiento
+                profesional.
+              </p>
+            </article>
 
-        <h3>Ambiente Motivador</h3>
+            <!-- TARJETA -->
 
-        <p>
-          Un entorno enfocado en disciplina, constancia y crecimiento personal.
-        </p>
-      </article>
+            <article class="beneficio-card" tabindex="0">
+              <i data-lucide="heart-pulse"></i>
 
-      <article class="beneficio-card" tabindex="0">
-        <i data-lucide="lock-keyhole"></i>
+              <h3>Ambiente Motivador</h3>
 
-        <h3>Lockers y Servicios</h3>
+              <p>
+                Un entorno enfocado en disciplina, constancia y crecimiento
+                personal.
+              </p>
+            </article>
 
-        <p>
-          Comodidades esenciales para que entrenes con tranquilidad.
-        </p>
-      </article>
+            <!-- TARJETA -->
 
-      <article class="beneficio-card" tabindex="0">
-        <i data-lucide="users"></i>
+            <article class="beneficio-card" tabindex="0">
+              <i data-lucide="lock-keyhole"></i>
 
-        <h3>Comunidad Fitness</h3>
+              <h3>Lockers y Servicios</h3>
 
-        <p>
-          Comparte metas y motivación con personas comprometidas con su progreso.
-        </p>
-      </article>
+              <p>Comodidades esenciales para que entrenes con tranquilidad.</p>
+            </article>
 
-    </div>
+            <!-- TARJETA -->
 
-  </div>
-</section>
+            <article class="beneficio-card" tabindex="0">
+              <i data-lucide="users"></i>
+
+              <h3>Comunidad Fitness</h3>
+
+              <p>
+                Comparte metas y motivación con personas comprometidas con su
+                progreso.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <!-- PLANES -->
 
       <section id="planes" aria-labelledby="planes-title">
         <div class="container">
+          <!-- TÍTULO -->
+
           <h2 id="planes-title">Planes</h2>
 
+          <!-- CONTENEDOR -->
+
           <div class="planes-container">
-            <!-- PLAN 1 -->
+            <!-- PLAN DIARIO -->
 
             <article class="plan-card" tabindex="0">
               <h3>Sesión Diaria</h3>
@@ -342,6 +354,8 @@
             <!-- PLAN GENERAL -->
 
             <article class="plan-card featured-plan" tabindex="0">
+              <!-- ETIQUETA -->
+
               <span class="plan-badge"> Popular </span>
 
               <h3>Generales</h3>
@@ -349,6 +363,8 @@
               <p class="plan-price">₡18 000</p>
 
               <p class="plan-subtitle">Mensualidad general</p>
+
+              <!-- OPCIONES -->
 
               <div class="plan-options">
                 <div class="plan-option">
@@ -376,6 +392,8 @@
                 </div>
               </div>
 
+              <!-- BENEFICIOS -->
+
               <ul>
                 <li>✓ Acceso completo al gimnasio</li>
 
@@ -388,6 +406,8 @@
             <!-- PLAN PREMIUM -->
 
             <article class="plan-card premium-plan" tabindex="0">
+              <!-- ETIQUETA -->
+
               <span class="plan-badge premium-badge"> Premium </span>
 
               <h3>Plan Personal</h3>
@@ -395,6 +415,8 @@
               <p class="plan-price">₡85 000</p>
 
               <p class="plan-subtitle">Entrenamiento personalizado</p>
+
+              <!-- BENEFICIOS -->
 
               <ul>
                 <li>✓ 3 clases por semana</li>
@@ -418,7 +440,11 @@
 
       <section id="galeria" aria-labelledby="galeria-title">
         <div class="container">
+          <!-- TÍTULO -->
+
           <h2 id="galeria-title">Nuestras Instalaciones</h2>
+
+          <!-- IMÁGENES -->
 
           <div class="galeria-container">
             <figure tabindex="0">
@@ -427,7 +453,7 @@
                 alt="Área de pesas de Twenty4 Fitness"
                 loading="lazy"
               />
-            </figure >
+            </figure>
 
             <figure tabindex="0">
               <img
@@ -435,7 +461,7 @@
                 alt="Máquinas de entrenamiento del gimnasio"
                 loading="lazy"
               />
-            </figure >
+            </figure>
 
             <figure tabindex="0">
               <img
@@ -476,13 +502,23 @@
 
       <section id="horarios" aria-labelledby="horarios-title">
         <div class="container">
+          <!-- TÍTULO -->
+
           <h2 id="horarios-title">Horarios</h2>
 
+          <!-- TARJETAS -->
+
           <div class="horarios-container">
+            <!-- HORARIO SEMANAL -->
+
             <article class="horario-card" tabindex="0">
+              <!-- ICONO -->
+
               <div class="horario-icon">
                 <i data-lucide="clock-3"></i>
               </div>
+
+              <!-- INFORMACIÓN -->
 
               <div class="horario-info">
                 <h3>Lunes a Viernes</h3>
@@ -491,10 +527,16 @@
               </div>
             </article>
 
+            <!-- HORARIO FIN DE SEMANA -->
+
             <article class="horario-card" tabindex="0">
+              <!-- ICONO -->
+
               <div class="horario-icon">
                 <i data-lucide="calendar-days"></i>
               </div>
+
+              <!-- INFORMACIÓN -->
 
               <div class="horario-info">
                 <h3>Sábados y Feriados</h3>
@@ -508,129 +550,147 @@
 
       <!-- REGLAMENTO -->
 
-      <section
-  id="reglamento"
-  aria-labelledby="reglamento-title"
->
-  <div class="container">
+      <section id="reglamento" aria-labelledby="reglamento-title">
+        <div class="container">
+          <!-- ETIQUETA -->
 
-    <span class="section-tag">
-      NORMAS DEL GIMNASIO
-    </span>
+          <span class="section-tag"> NORMAS DEL GIMNASIO </span>
 
-    <h2 id="reglamento-title">
-      Reglamento General
-    </h2>
+          <!-- TÍTULO -->
 
-    <p class="reglamento-intro">
-      Estas normas están diseñadas para garantizar
-      un ambiente seguro, ordenado y agradable
-      para todos nuestros miembros.
-    </p>
+          <h2 id="reglamento-title">Reglamento General</h2>
 
-    <div class="reglamento-list">
+          <!-- DESCRIPCIÓN -->
 
-      <article class="regla-item" tabindex="0">
-        <span class="regla-numero">01</span>
-
-        <div class="regla-contenido">
-          <h3>Uso responsable del equipo</h3>
-
-          <p>
-            Limpie y acomode el equipo después de
-            cada uso para mantener el orden y la higiene.
+          <p class="reglamento-intro">
+            Estas normas están diseñadas para garantizar un ambiente seguro,
+            ordenado y agradable para todos nuestros miembros.
           </p>
+
+          <!-- LISTA DE REGLAS -->
+
+          <div class="reglamento-list">
+            <!-- REGLA -->
+
+            <article class="regla-item" tabindex="0">
+              <span class="regla-numero"> 01 </span>
+
+              <div class="regla-contenido">
+                <h3>Uso responsable del equipo</h3>
+
+                <p>
+                  Limpie y acomode el equipo después de cada uso para mantener
+                  el orden y la higiene.
+                </p>
+              </div>
+            </article>
+
+            <!-- REGLA -->
+
+            <article class="regla-item" tabindex="0">
+              <span class="regla-numero"> 02 </span>
+
+              <div class="regla-contenido">
+                <h3>Uso obligatorio de toalla</h3>
+
+                <p>
+                  Utilice siempre una toalla personal durante sus
+                  entrenamientos.
+                </p>
+              </div>
+            </article>
+
+            <!-- REGLA -->
+
+            <article class="regla-item" tabindex="0">
+              <span class="regla-numero"> 03 </span>
+
+              <div class="regla-contenido">
+                <h3>Respeto y convivencia</h3>
+
+                <p>
+                  Mantenga una actitud respetuosa hacia los demás usuarios y
+                  colaboradores.
+                </p>
+              </div>
+            </article>
+
+            <!-- REGLA -->
+
+            <article class="regla-item" tabindex="0">
+              <span class="regla-numero"> 04 </span>
+
+              <div class="regla-contenido">
+                <h3>Seguridad</h3>
+
+                <p>
+                  Utilice los equipos de acuerdo con las indicaciones del
+                  personal.
+                </p>
+              </div>
+            </article>
+
+            <!-- REGLA -->
+
+            <article class="regla-item" tabindex="0">
+              <span class="regla-numero"> 05 </span>
+
+              <div class="regla-contenido">
+                <h3>Objetos personales</h3>
+
+                <p>
+                  Twenty4 Fitness no se hace responsable por objetos olvidados o
+                  extraviados.
+                </p>
+              </div>
+            </article>
+
+            <!-- REGLA -->
+
+            <article class="regla-item" tabindex="0">
+              <span class="regla-numero"> 06 </span>
+
+              <div class="regla-contenido">
+                <h3>Vestimenta adecuada</h3>
+
+                <p>
+                  Es obligatorio utilizar ropa y calzado deportivo apropiado
+                  para entrenar.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
-      </article>
-
-      <article class="regla-item" tabindex="0">
-        <span class="regla-numero">02</span>
-
-        <div class="regla-contenido">
-          <h3>Uso obligatorio de toalla</h3>
-
-          <p>
-            Utilice siempre una toalla personal
-            durante sus entrenamientos.
-          </p>
-        </div>
-      </article>
-
-      <article class="regla-item" tabindex="0">
-        <span class="regla-numero">03</span>
-
-        <div class="regla-contenido">
-          <h3>Respeto y convivencia</h3>
-
-          <p>
-            Mantenga una actitud respetuosa hacia
-            los demás usuarios y colaboradores.
-          </p>
-        </div>
-      </article>
-
-      <article class="regla-item" tabindex="0">
-        <span class="regla-numero">04</span>
-
-        <div class="regla-contenido">
-          <h3>Seguridad</h3>
-
-          <p>
-            Utilice los equipos de acuerdo con las
-            indicaciones del personal.
-          </p>
-        </div>
-      </article>
-
-      <article class="regla-item" tabindex="0">
-        <span class="regla-numero">05</span>
-
-        <div class="regla-contenido">
-          <h3>Objetos personales</h3>
-
-          <p>
-            Twenty4 Fitness no se hace responsable
-            por objetos olvidados o extraviados.
-          </p>
-        </div>
-      </article>
-
-      <article class="regla-item" tabindex="0">
-        <span class="regla-numero">06</span>
-
-        <div class="regla-contenido">
-          <h3>Vestimenta adecuada</h3>
-
-          <p>
-            Es obligatorio utilizar ropa y calzado
-            deportivo apropiado para entrenar.
-          </p>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-</section>
+      </section>
 
       <!-- CONTACTO -->
 
       <section id="contacto" aria-labelledby="contacto-title">
         <div class="container">
+          <!-- TÍTULO -->
+
           <h2 id="contacto-title">Contáctanos</h2>
+
+          <!-- DESCRIPCIÓN -->
 
           <p class="contact-description">
             Puedes comunicarte con nosotros a través de nuestras redes sociales
             o visitarnos directamente en nuestras instalaciones.
           </p>
 
+          <!-- TARJETAS -->
+
           <div class="contacto-container">
             <!-- WHATSAPP -->
 
             <article class="contact-card" tabindex="0">
+              <!-- ICONO -->
+
               <div class="contact-icon">
                 <i class="fa-brands fa-whatsapp"></i>
               </div>
+
+              <!-- INFORMACIÓN -->
 
               <div>
                 <h3>WhatsApp</h3>
@@ -648,9 +708,13 @@
             <!-- INSTAGRAM -->
 
             <article class="contact-card" tabindex="0">
+              <!-- ICONO -->
+
               <div class="contact-icon">
                 <i class="fa-brands fa-instagram"></i>
               </div>
+
+              <!-- INFORMACIÓN -->
 
               <div>
                 <h3>Instagram</h3>
@@ -668,9 +732,13 @@
             <!-- FACEBOOK -->
 
             <article class="contact-card" tabindex="0">
+              <!-- ICONO -->
+
               <div class="contact-icon">
                 <i class="fa-brands fa-facebook-f"></i>
               </div>
+
+              <!-- INFORMACIÓN -->
 
               <div>
                 <h3>Facebook</h3>
@@ -688,9 +756,13 @@
             <!-- UBICACIÓN -->
 
             <article class="contact-card" tabindex="0">
+              <!-- ICONO -->
+
               <div class="contact-icon">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
+
+              <!-- INFORMACIÓN -->
 
               <div>
                 <h3>Ubicación</h3>
@@ -715,11 +787,11 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- PIE DE PÁGINA -->
 
     <footer>
       <div class="container footer-container">
-        <!-- BRAND -->
+        <!-- MARCA -->
 
         <div class="footer-brand">
           <img
@@ -733,7 +805,7 @@
           <p>Disciplina • Constancia • Rendimiento</p>
         </div>
 
-        <!-- SOCIAL -->
+        <!-- REDES SOCIALES -->
 
         <section class="footer-social" aria-labelledby="social-title">
           <h2 id="social-title" class="sr-only">Redes sociales</h2>
@@ -771,18 +843,20 @@
         </section>
       </div>
 
+      <!-- COPYRIGHT -->
+
       <p class="footer-copy">
         © 2026 Twenty4 Fitness. Todos los derechos reservados.
       </p>
     </footer>
 
-    <!-- ICONOS -->
+    <!-- ICONOS LUCIDE -->
 
     <script>
       lucide.createIcons();
     </script>
 
-    <!-- JS -->
+    <!-- JAVASCRIPT -->
 
     <script src="./js/app.js"></script>
   </body>
