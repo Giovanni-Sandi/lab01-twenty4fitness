@@ -136,21 +136,21 @@ button:focus-visible {
 /* ========================================= */
 
 header {
+  background-color: rgba(10, 10, 10, 0.92);
+
+  padding: 0.4rem 2rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
   position: sticky;
 
   top: 0;
 
   z-index: 1000;
 
-  padding: 0.7rem 2rem;
-
-  background-color: rgba(10, 10, 10, 0.92);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
   backdrop-filter: blur(10px);
 
-  transition: transform 0s ease;
+  transition: transform 0.2s ease;
 }
 
 header.hide-navbar {
@@ -223,7 +223,7 @@ nav a:hover::after {
 /* ========================================= */
 
 .logo {
-  width: 170px;
+  width: 130px;
   object-fit: contain;
 }
 
