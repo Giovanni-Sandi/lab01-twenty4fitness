@@ -9,7 +9,7 @@
 }
 
 /* ========================================= */
-/* VARIABLES */
+/* VARIABLES GLOBALES */
 /* ========================================= */
 
 :root {
@@ -23,35 +23,36 @@
 }
 
 /* ========================================= */
-/* BASE */
+/* ESTILOS BASE */
 /* ========================================= */
 
 html {
   scroll-behavior: smooth;
+  transition: font-size 0.3s ease;
 }
 
 body {
-  background-color: var(--color-background);
-
-  background: radial-gradient(circle at top, #161616 0%, #0a0a0a 45%);
-
-  color: var(--color-text);
-
   font-family: "Inter", sans-serif;
 
   line-height: 1.5;
 
+  color: var(--color-text);
+
   overflow-x: hidden;
+
+  background-color: var(--color-background);
+
+  background: radial-gradient(circle at top, #161616 0%, #0a0a0a 45%);
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 ul {
@@ -65,16 +66,13 @@ ul {
 
 section {
   padding: 7rem 2rem;
-
   scroll-margin-top: 120px;
 }
 
 section h2 {
   font-size: 3rem;
-
-  margin-bottom: 2rem;
-
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 section p {
@@ -82,7 +80,22 @@ section p {
 }
 
 /* ========================================= */
-/* ACCESSIBILITY */
+/* TIPOGRAFÍAS */
+/* ========================================= */
+
+h1,
+h2,
+h3,
+nav a,
+.plan-price,
+.section-tag,
+.coach-label {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ========================================= */
+/* ACCESIBILIDAD GENERAL */
 /* ========================================= */
 
 .skip-link {
@@ -91,13 +104,13 @@ section p {
   top: -50px;
   left: 20px;
 
-  background-color: var(--color-primary);
-
-  color: white;
-
   padding: 12px 18px;
 
   border-radius: 10px;
+
+  background-color: var(--color-primary);
+
+  color: #ffffff;
 
   z-index: 9999;
 
@@ -111,7 +124,6 @@ section p {
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--color-primary);
-
   outline-offset: 4px;
 
   border-radius: 8px;
@@ -124,17 +136,17 @@ button:focus-visible {
 /* ========================================= */
 
 header {
-  background-color: rgba(10, 10, 10, 0.92);
-
-  padding: 0.7rem 2rem;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
   position: sticky;
 
   top: 0;
 
   z-index: 1000;
+
+  padding: 0.7rem 2rem;
+
+  background-color: rgba(10, 10, 10, 0.92);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
   backdrop-filter: blur(10px);
 
@@ -145,43 +157,31 @@ header.hide-navbar {
   transform: translateY(-100%);
 }
 
+/* ========================================= */
+/* NAVEGACIÓN */
+/* ========================================= */
+
 nav {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 
   min-height: 65px;
 }
 
-/* ========================================= */
-/* LOGO */
-/* ========================================= */
-
-.logo {
-  width: 170px;
-
-  object-fit: contain;
-}
-
-/* ========================================= */
-/* NAVBAR */
-/* ========================================= */
-
 nav ul {
   display: flex;
 
-  gap: 2.5rem;
-
   align-items: center;
+
+  gap: 2.5rem;
 }
 
 nav a {
   position: relative;
 
   font-size: 1.15rem;
-
   font-weight: 500;
 
   transition: color 0.3s ease;
@@ -212,30 +212,38 @@ nav a:hover::after {
 }
 
 /* ========================================= */
-/* THEME BUTTON */
+/* LOGO */
+/* ========================================= */
+
+.logo {
+  width: 170px;
+  object-fit: contain;
+}
+
+/* ========================================= */
+/* BOTÓN CAMBIO DE TEMA */
 /* ========================================= */
 
 #theme-toggle {
-  background-color: transparent;
+  display: flex;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  color: var(--color-text);
+  justify-content: center;
+  align-items: center;
 
   width: 52px;
   height: 52px;
 
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
 
-  cursor: pointer;
+  background-color: transparent;
+
+  color: var(--color-text);
 
   font-size: 1.4rem;
-
   font-weight: 300;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  cursor: pointer;
 
   transition:
     background-color 0.3s ease,
@@ -253,15 +261,18 @@ nav a:hover::after {
 }
 
 /* ========================================= */
-/* MENU HAMBURGUESA */
+/* MENÚ HAMBURGUESA */
 /* ========================================= */
 
 #menu-toggle {
   display: none;
 
-  background: transparent;
+  width: 40px;
+  height: 40px;
 
   border: none;
+
+  background: transparent;
 
   color: var(--color-text);
 
@@ -275,21 +286,22 @@ nav a:hover::after {
 /* ========================================= */
 
 #inicio {
-  min-height: 100vh;
+  position: relative;
 
   display: flex;
   align-items: center;
 
-  position: relative;
+  min-height: 100vh;
 
   overflow: hidden;
 
   background-image: url("../img/hero/hero-gym.jpg");
-
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
+
+/* CAPA OSCURA SOBRE LA IMAGEN */
 
 #inicio::before {
   content: "";
@@ -305,9 +317,10 @@ nav a:hover::after {
   );
 }
 
+/* CONTENIDO */
+
 #inicio .container {
   position: relative;
-
   z-index: 1;
 }
 
@@ -316,45 +329,53 @@ nav a:hover::after {
 }
 
 #inicio h1 {
+  margin-bottom: 1.5rem;
+
   font-size: 5.5rem;
 
   line-height: 1;
 
   letter-spacing: -2px;
-
-  margin-bottom: 1.5rem;
 }
 
 #inicio p {
-  font-size: 1.2rem;
-
   max-width: 600px;
 
   margin-bottom: 2rem;
+
+  font-size: 1.2rem;
 }
+
+/* ========================================= */
+/* BOTONES HERO */
+/* ========================================= */
 
 #inicio a {
   display: inline-block;
+
+  margin-right: 1rem;
 
   padding: 1rem 2rem;
 
   border-radius: 8px;
 
-  margin-right: 1rem;
-
   font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(255, 77, 94, 0.2);
 
   transition:
     transform 0.3s ease,
     opacity 0.3s ease,
     box-shadow 0.3s ease;
-
-  box-shadow: 0 10px 25px rgba(255, 77, 94, 0.2);
 }
+
+/* BOTÓN PRINCIPAL */
 
 #inicio a:first-of-type {
   background-color: var(--color-primary);
 }
+
+/* BOTÓN SECUNDARIO */
 
 #inicio a:last-of-type {
   background-color: transparent;
@@ -369,7 +390,7 @@ nav a:hover::after {
 }
 
 /* ========================================= */
-/* SECCIONES */
+/* FONDOS GENERALES DE SECCIONES */
 /* ========================================= */
 
 #nosotros,
@@ -382,23 +403,30 @@ nav a:hover::after {
 #planes,
 #horarios,
 #contacto {
-  background: linear-gradient(to bottom, #0a0a0a, #111111);
+  background: linear-gradient(
+    to bottom,
+    #0a0a0a,
+    #111111
+  );
 }
 
 /* ========================================= */
-/* SOBRE NOSOTROS */
+/* SECCIÓN: SOBRE NOSOTROS */
 /* ========================================= */
 
 #nosotros {
-  background:
-    linear-gradient(
-      to bottom,
-      #0b0b0b,
-      #111111
-    );
-
   padding: 8rem 0;
+
+  background: linear-gradient(
+    to bottom,
+    #0b0b0b,
+    #111111
+  );
 }
+
+/* ========================================= */
+/* ENCABEZADO */
+/* ========================================= */
 
 .nosotros-header {
   max-width: 900px;
@@ -411,48 +439,48 @@ nav a:hover::after {
 .section-tag {
   display: inline-block;
 
-  padding: .8rem 1.5rem;
+  margin-bottom: 1.5rem;
+
+  padding: 0.8rem 1.5rem;
 
   border-radius: 999px;
 
-  background-color: rgba(255,77,94,.1);
+  background-color: rgba(255, 77, 94, 0.1);
 
   color: var(--color-primary);
 
-  font-size: .8rem;
-
+  font-size: 0.8rem;
   font-weight: 700;
 
   letter-spacing: 2px;
-
-  margin-bottom: 1.5rem;
 }
 
 .nosotros-header h2 {
-  font-size: 4.5rem;
-
   margin-bottom: 2rem;
+
+  font-size: 4.5rem;
 }
 
 .nosotros-intro {
-  font-size: 1.25rem;
+  max-width: 800px;
 
-  line-height: 2.1;
+  margin: 0 auto 2rem;
 
   color: var(--color-text-secondary);
 
-  max-width: 800px;
+  font-size: 1.25rem;
 
-  margin:
-    0 auto
-    2rem;
+  line-height: 2.1;
 }
+
+/* ========================================= */
+/* DETALLES DEL GIMNASIO */
+/* ========================================= */
 
 .gym-details {
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   gap: 1.5rem;
@@ -466,14 +494,13 @@ nav a:hover::after {
 
 .detail-divider {
   width: 40px;
-
   height: 2px;
 
   background-color: var(--color-primary);
 }
 
 /* ========================================= */
-/* COACH CARD */
+/* TARJETA DEL COACH */
 /* ========================================= */
 
 .coach-card {
@@ -481,26 +508,28 @@ nav a:hover::after {
 
   grid-template-columns: 400px 1fr;
 
-  gap: 4rem;
-
   align-items: center;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(28,28,28,.95),
-      rgba(15,15,15,1)
-    );
-
-  border-radius: 32px;
+  gap: 4rem;
 
   overflow: hidden;
 
-  border: 1px solid rgba(255,255,255,.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.4);
+  border-radius: 32px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(28, 28, 28, 0.95),
+    rgba(15, 15, 15, 1)
+  );
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
+
+/* ========================================= */
+/* IMAGEN DEL COACH */
+/* ========================================= */
 
 .coach-image {
   height: 100%;
@@ -508,13 +537,14 @@ nav a:hover::after {
 
 .coach-image img {
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
-
-  display: block;
 }
+
+/* ========================================= */
+/* CONTENIDO DEL COACH */
+/* ========================================= */
 
 .coach-content {
   padding: 4rem;
@@ -523,19 +553,16 @@ nav a:hover::after {
 .coach-label {
   color: var(--color-primary);
 
-  font-size: .85rem;
-
+  font-size: 0.85rem;
   font-weight: 700;
 
   letter-spacing: 2px;
 }
 
 .coach-content h3 {
-  font-size: 2.5rem;
+  margin: 1rem 0 1.5rem;
 
-  margin:
-    1rem 0
-    1.5rem;
+  font-size: 2.5rem;
 }
 
 .coach-content p {
@@ -546,24 +573,28 @@ nav a:hover::after {
   line-height: 2;
 }
 
+/* ========================================= */
+/* ESTADÍSTICAS */
+/* ========================================= */
+
 .coach-stats {
   display: flex;
+
+  flex-wrap: wrap;
 
   gap: 3rem;
 
   margin-top: 3rem;
-
-  flex-wrap: wrap;
 }
 
 .coach-stats strong {
   display: block;
 
+  margin-bottom: 0.5rem;
+
   color: var(--color-primary);
 
   font-size: 2.2rem;
-
-  margin-bottom: .5rem;
 }
 
 .coach-stats span {
@@ -571,35 +602,37 @@ nav a:hover::after {
 }
 
 /* ========================================= */
-/* BENEFICIOS */
+/* SECCIÓN: BENEFICIOS */
 /* ========================================= */
 
 #beneficios {
-  background:
-    linear-gradient(
-      to bottom,
-      #0a0a0a,
-      #111111
-    );
+  background: linear-gradient(
+    to bottom,
+    #0a0a0a,
+    #111111
+  );
 }
 
-.beneficios-header {
+.beneficios-tag {
+  display: block;
+
+  margin-bottom: 1rem;
+
   text-align: center;
 
-  max-width: 800px;
+  color: var(--color-primary);
 
-  margin: 0 auto 4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
 }
 
-.beneficios-header p {
-  font-size: 1.1rem;
+/* ========================================= */
+/* GRID DE BENEFICIOS */
+/* ========================================= */
 
-  color: var(--color-text-secondary);
-
-  margin-top: 1rem;
-}
-
-.beneficios-container {
+.beneficios-grid {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
@@ -609,19 +642,25 @@ nav a:hover::after {
   margin-top: 4rem;
 }
 
+/* ========================================= */
+/* TARJETAS */
+/* ========================================= */
+
 .beneficio-card {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(25, 25, 25, 0.98),
-      rgba(12, 12, 12, 1)
-    );
+  position: relative;
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  border-radius: 18px;
+  overflow: hidden;
 
   padding: 2.2rem 1.8rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(25, 25, 25, 0.98),
+    rgba(12, 12, 12, 1)
+  );
 
   text-align: center;
 
@@ -629,10 +668,6 @@ nav a:hover::after {
     transform 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease;
-
-  position: relative;
-
-  overflow: hidden;
 }
 
 .beneficio-card::before {
@@ -653,10 +688,6 @@ nav a:hover::after {
   transition: transform 0.3s ease;
 }
 
-.beneficio-card:hover::before {
-  transform: scaleX(1);
-}
-
 .beneficio-card:hover {
   transform: translateY(-10px);
 
@@ -667,34 +698,35 @@ nav a:hover::after {
     0 0 30px rgba(255, 77, 94, 0.08);
 }
 
-.beneficio-icon {
-  width: 75px;
-
-  height: 75px;
-
-  margin: 0 auto 1.5rem;
-
-  border-radius: 50%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background-color: rgba(255, 77, 94, 0.08);
-
-  color: var(--color-primary);
-
-  font-size: 2rem;
+.beneficio-card:hover::before {
+  transform: scaleX(1);
 }
 
+/* ========================================= */
+/* ICONOS */
+/* ========================================= */
+
+.beneficio-card svg {
+  width: 55px;
+  height: 55px;
+
+  margin-bottom: 1.5rem;
+
+  stroke: var(--color-primary);
+
+  stroke-width: 1.8;
+}
+
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
+
 .beneficio-card h3 {
+  margin-bottom: 1rem;
+
   color: var(--color-text);
 
   font-size: 1.2rem;
-
-  margin-bottom: 1rem;
 }
 
 .beneficio-card p {
@@ -704,60 +736,9 @@ nav a:hover::after {
 
   line-height: 1.8;
 }
-/* ========================================= */
-/* TARJETAS GENERALES */
-/* ========================================= */
-
-.beneficios-container article,
-.planes-container article,
-.reglamento-container article,
-.horarios-container article {
-  background-color: var(--color-surface);
-
-  padding: 2rem;
-
-  border-radius: 16px;
-
-  border: 1px solid rgba(255, 255, 255, 0.05);
-
-  box-shadow:
-    0 0 15px rgba(0, 0, 0, 0.25),
-    0 0 40px rgba(0, 0, 0, 0.1);
-
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.beneficios-container article:hover,
-.planes-container article:hover,
-.reglamento-container article:hover,
-.horarios-container article:hover {
-  transform: translateY(-8px);
-
-  border-color: rgba(255, 77, 94, 0.2);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(255, 77, 94, 0.08);
-}
 
 /* ========================================= */
-/* TITULOS TARJETAS */
-/* ========================================= */
-
-.beneficios-container h3,
-.planes-container h3,
-.reglamento-container h3,
-.horarios-container h3 {
-  margin-bottom: 1rem;
-
-  color: var(--color-primary);
-}
-
-/* ========================================= */
-/* PLANES */
+/* SECCIÓN: PLANES */
 /* ========================================= */
 
 .planes-container {
@@ -770,8 +751,19 @@ nav a:hover::after {
   margin-top: 4rem;
 }
 
+/* ========================================= */
+/* TARJETAS DE PLANES */
+/* ========================================= */
+
 .plan-card {
   position: relative;
+
+  overflow: hidden;
+
+  padding: 3rem 2.5rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
 
   background: linear-gradient(
     145deg,
@@ -779,22 +771,14 @@ nav a:hover::after {
     rgba(15, 15, 15, 1)
   );
 
-  border-radius: 24px;
-
-  padding: 3rem 2.5rem;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.35),
     0 0 40px rgba(0, 0, 0, 0.2);
 
   transition:
     transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .plan-card:hover {
@@ -807,30 +791,33 @@ nav a:hover::after {
     0 0 40px rgba(255, 77, 94, 0.12);
 }
 
-.plan-card h3 {
-  font-size: 1.8rem;
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
 
+.plan-card h3 {
   margin-bottom: 1.5rem;
 
   color: var(--color-primary);
+
+  font-size: 1.8rem;
 }
 
 .plan-price {
-  font-size: 2.8rem;
-
-  font-weight: 800;
-
-  line-height: 1;
-
   margin-bottom: 0.8rem;
 
   color: var(--color-text);
+
+  font-size: 2.8rem;
+  font-weight: 800;
+
+  line-height: 1;
 }
 
 .plan-subtitle {
-  color: var(--color-text-secondary);
-
   margin-bottom: 2rem;
+
+  color: var(--color-text-secondary);
 
   font-size: 1rem;
 }
@@ -846,10 +833,14 @@ nav a:hover::after {
 .plan-card li {
   color: var(--color-text-secondary);
 
-  line-height: 1.7;
-
   font-size: 1rem;
+
+  line-height: 1.7;
 }
+
+/* ========================================= */
+/* ETIQUETAS */
+/* ========================================= */
 
 .plan-badge {
   position: absolute;
@@ -857,22 +848,31 @@ nav a:hover::after {
   top: 24px;
   right: 22px;
 
-  background-color: var(--color-primary);
-
-  color: white;
-
   padding: 0.55rem 1.4rem;
 
   border-radius: 999px;
 
-  font-size: 0.8rem;
+  background-color: var(--color-primary);
 
+  color: #ffffff;
+
+  font-size: 0.8rem;
   font-weight: 700;
 
   letter-spacing: 0.5px;
 
   text-transform: uppercase;
 }
+
+.premium-badge {
+  background-color: #ffffff;
+
+  color: #111111;
+}
+
+/* ========================================= */
+/* PLAN DESTACADO */
+/* ========================================= */
 
 .featured-plan {
   transform: scale(1.04);
@@ -886,41 +886,41 @@ nav a:hover::after {
   transform: scale(1.04) translateY(-12px);
 }
 
+/* ========================================= */
+/* PLAN PREMIUM */
+/* ========================================= */
+
 .premium-plan {
-  background: linear-gradient(145deg, rgba(20, 20, 20, 1), rgba(8, 8, 8, 1));
-}
-
-.premium-badge {
-  background-color: #ffffff;
-
-  color: #111111;
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 1),
+    rgba(8, 8, 8, 1)
+  );
 }
 
 /* ========================================= */
-/* OPCIONES DE PLAN */
+/* OPCIONES DEL PLAN GENERAL */
 /* ========================================= */
 
 .plan-options {
-  margin-bottom: 2rem;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-  padding: 1.2rem 0;
-
   display: flex;
 
   flex-direction: column;
 
   gap: 1rem;
+
+  margin-bottom: 2rem;
+
+  padding: 1.2rem 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .plan-option {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 }
 
@@ -935,48 +935,123 @@ nav a:hover::after {
 }
 
 /* ========================================= */
-/* GALERIA */
+/* SECCIÓN: GALERÍA */
 /* ========================================= */
 
-.galeria-container {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 1.5rem;
-
-  margin-top: 3rem;
+#galeria {
+  background-color: #111111;
 }
 
-.galeria-container article,
-.galeria-container figure {
+/* ========================================= */
+/* CONTENEDOR DEL CARRUSEL */
+/* ========================================= */
+
+.carousel {
+  position: relative;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 3rem auto 0;
+}
+
+.carousel-track-container {
   overflow: hidden;
 
-  border-radius: 16px;
-
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.galeria-container img {
-  width: 100%;
-
-  height: 260px;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.4s ease,
-    filter 0.4s ease;
-}
-
-.galeria-container img:hover {
-  transform: scale(1.06);
-
-  filter: brightness(1.1);
+  border-radius: 25px;
 }
 
 /* ========================================= */
-/* HORARIOS */
+/* PISTA DEL CARRUSEL */
+/* ========================================= */
+
+.carousel-track {
+  display: flex;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+
+  margin: 0;
+}
+
+/* ========================================= */
+/* IMÁGENES */
+/* ========================================= */
+
+.slide img {
+  display: block;
+
+  width: 100%;
+  height: 500px;
+
+  border-radius: 25px;
+
+  object-fit: cover;
+}
+
+/* ========================================= */
+/* BOTONES DEL CARRUSEL */
+/* ========================================= */
+
+.carousel-btn {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  color: #ffffff;
+
+  font-size: 1.8rem;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--color-primary);
+}
+
+/* ========================================= */
+/* POSICIONAMIENTO BOTONES */
+/* ========================================= */
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* ========================================= */
+/* SECCIÓN: HORARIOS */
+/* ========================================= */
+
+#horarios {
+  background: linear-gradient(
+    to bottom,
+    #0a0a0a,
+    #111111
+  );
+}
+
+/* ========================================= */
+/* CONTENEDOR DE TARJETAS */
 /* ========================================= */
 
 .horarios-container {
@@ -984,24 +1059,29 @@ nav a:hover::after {
 
   justify-content: center;
 
-  gap: 2rem;
-
   flex-wrap: wrap;
+
+  gap: 2rem;
 
   margin-top: 4rem;
 }
 
-.horario-card {
-  width: 340px;
+/* ========================================= */
+/* TARJETA DE HORARIO */
+/* ========================================= */
 
+.horario-card {
   display: flex;
 
   align-items: center;
 
   gap: 1.5rem;
 
+  width: 340px;
+
   padding: 2rem;
 
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 24px;
 
   background: linear-gradient(
@@ -1009,8 +1089,6 @@ nav a:hover::after {
     rgba(28, 28, 28, 0.98),
     rgba(15, 15, 15, 1)
   );
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
 
   transition:
     transform 0.3s ease,
@@ -1028,38 +1106,42 @@ nav a:hover::after {
     0 0 30px rgba(255, 77, 94, 0.08);
 }
 
-.horario-icon {
-  width: 70px;
+/* ========================================= */
+/* ICONO */
+/* ========================================= */
 
+.horario-icon {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  width: 70px;
   height: 70px;
 
   border-radius: 18px;
 
   background-color: rgba(255, 77, 94, 0.08);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-shrink: 0;
 }
 
 .horario-icon svg {
   width: 30px;
-
   height: 30px;
 
   stroke: var(--color-primary);
-
   stroke-width: 2;
 }
 
-.horario-info h3 {
-  color: var(--color-text);
+/* ========================================= */
+/* INFORMACIÓN */
+/* ========================================= */
 
+.horario-info h3 {
   margin-bottom: 0.5rem;
+
+  color: var(--color-text);
 
   font-size: 1.2rem;
 }
@@ -1071,62 +1153,124 @@ nav a:hover::after {
 }
 
 /* ========================================= */
-/* REGLAMENTO */
+/* SECCIÓN: REGLAMENTO */
 /* ========================================= */
 
-.reglamento-container {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 2rem;
-
-  margin-top: 3rem;
+#reglamento {
+  background-color: #111111;
 }
 
 /* ========================================= */
-/* CONTACTO */
+/* INTRODUCCIÓN */
 /* ========================================= */
 
-#contacto {
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 3rem;
-
-  flex-wrap: wrap;
-}
-
-#contacto article {
-  flex: 1;
-
-  min-width: 300px;
-}
-
-#contacto ul {
-  margin: 2rem 0;
-}
-
-#contacto li {
-  margin-bottom: 1rem;
-}
-
-#contacto a {
-  color: var(--color-primary);
-}
-
-.contact-description {
-  text-align: center;
-
+.reglamento-intro {
   max-width: 800px;
 
   margin: 0 auto 4rem;
+
+  text-align: center;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.1rem;
+}
+
+/* ========================================= */
+/* LISTA DE REGLAS */
+/* ========================================= */
+
+.reglamento-list {
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+/* ========================================= */
+/* ITEM DEL REGLAMENTO */
+/* ========================================= */
+
+.regla-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 2rem;
+
+  padding: 2.5rem 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease;
+}
+
+.regla-item:hover {
+  transform: translateX(8px);
+}
+
+/* ========================================= */
+/* NÚMERO */
+/* ========================================= */
+
+.regla-numero {
+  min-width: 80px;
+
+  color: rgba(238, 21, 43, 0.25);
+
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
+
+.regla-contenido h3 {
+  margin-bottom: 1rem;
+
+  color: var(--color-primary);
+
+  font-size: 1.4rem;
+}
+
+.regla-contenido p {
+  color: var(--color-text-secondary);
+
+  line-height: 1.8;
+}
+
+/* ========================================= */
+/* SECCIÓN: CONTACTO */
+/* ========================================= */
+
+#contacto {
+  background: linear-gradient(
+    to bottom,
+    #0a0a0a,
+    #111111
+  );
+}
+
+/* ========================================= */
+/* DESCRIPCIÓN */
+/* ========================================= */
+
+.contact-description {
+  max-width: 800px;
+
+  margin: 0 auto 4rem;
+
+  text-align: center;
 
   color: var(--color-text-secondary);
 
   font-size: 1.05rem;
 }
+
+/* ========================================= */
+/* CONTENEDOR DE TARJETAS */
+/* ========================================= */
 
 .contacto-container {
   display: grid;
@@ -1138,6 +1282,10 @@ nav a:hover::after {
   margin-bottom: 4rem;
 }
 
+/* ========================================= */
+/* TARJETA */
+/* ========================================= */
+
 .contact-card {
   display: flex;
 
@@ -1147,6 +1295,7 @@ nav a:hover::after {
 
   padding: 1.8rem;
 
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 22px;
 
   background: linear-gradient(
@@ -1154,8 +1303,6 @@ nav a:hover::after {
     rgba(28, 28, 28, 0.98),
     rgba(15, 15, 15, 1)
   );
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
 
   transition:
     transform 0.3s ease,
@@ -1173,37 +1320,42 @@ nav a:hover::after {
     0 0 30px rgba(255, 77, 94, 0.08);
 }
 
-.contact-icon {
-  width: 60px;
+/* ========================================= */
+/* ICONO */
+/* ========================================= */
 
+.contact-icon {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  width: 60px;
   height: 60px;
 
   border-radius: 18px;
 
   background-color: rgba(255, 77, 94, 0.08);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-shrink: 0;
 }
 
 .contact-icon svg {
   width: 26px;
-
   height: 26px;
 
   stroke: var(--color-primary);
 }
 
 .contact-icon i {
-  font-size: 1.5rem;
-
   color: var(--color-primary);
+
+  font-size: 1.5rem;
 }
+
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
 
 .contact-card h3 {
   margin-bottom: 0.4rem;
@@ -1212,18 +1364,22 @@ nav a:hover::after {
 }
 
 .contact-card a,
-.contact-card p {
+.contact-card address {
   color: var(--color-text-secondary);
+
+  font-style: normal;
 }
 
 .contact-card a:hover {
   color: var(--color-primary);
 }
 
-.map-container iframe,
-iframe {
-  width: 100%;
+/* ========================================= */
+/* MAPA */
+/* ========================================= */
 
+.map-container iframe {
+  width: 100%;
   height: 450px;
 
   border: none;
@@ -1234,679 +1390,44 @@ iframe {
 }
 
 /* ========================================= */
-/* FOOTER */
-/* ========================================= */
-
-footer {
-  background: linear-gradient(to bottom, #050505, #0a0a0a);
-
-  padding: 5rem 2rem 2rem;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-container {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 12rem;
-
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  width: 280px;
-
-  margin-bottom: 1rem;
-}
-
-.footer-brand p {
-  color: var(--color-text-secondary);
-
-  font-size: 1.1rem;
-}
-
-footer h3 {
-  margin-bottom: 1rem;
-
-  color: var(--color-primary);
-
-  font-size: 2rem;
-}
-
-.social-icons {
-  display: flex;
-
-  gap: 1rem;
-}
-
-.social-icons a {
-  width: 50px;
-  height: 50px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  border-radius: 50%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 1.3rem;
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: var(--color-primary);
-
-  border-color: var(--color-primary);
-
-  transform: translateY(-4px);
-}
-
-.footer-copy {
-  text-align: center;
-
-  margin-top: 4rem;
-
-  color: var(--color-text-secondary);
-
-  font-size: 0.95rem;
-}
-
-/* ========================================= */
-/* LIGHT MODE */
-/* ========================================= */
-
-body.light-mode {
-  --color-background: #dde2e6;
-  --color-surface: #eceff1;
-
-  --color-text: #111111;
-  --color-text-secondary: #4f565c;
-
-  background:
-    radial-gradient(
-      circle at top,
-      #eef1f3 0%,
-      #dde2e6 100%
-    );
-}
-
-/* ========================================= */
-/* HEADER */
-/* ========================================= */
-
-body.light-mode header {
-  background: rgba(255, 255, 255, 0.82);
-
-  backdrop-filter: blur(18px);
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.04);
-}
-
-/* ========================================= */
-/* NAVBAR */
-/* ========================================= */
-
-body.light-mode nav a {
-  color: #1a1a1a;
-}
-
-body.light-mode nav a:hover {
-  color: var(--color-primary);
-}
-
-/* ========================================= */
-/* HERO */
-/* ========================================= */
-
-body.light-mode #inicio::before {
-  background:
-    linear-gradient(
-      to right,
-      rgba(248, 249, 250, 0.40),
-      rgba(248, 249, 250, 0.20),
-      rgba(248, 249, 250, 0.08)
-    );
-}
-
-body.light-mode #inicio h1 {
-  color: #111111;
-}
-
-body.light-mode #inicio p {
-  color: #111111;
-
-  font-size: 1.2rem;
-
-  font-weight: 500;
-
-  text-shadow:
-    0 2px 8px rgba(255, 255, 255, 0.95),
-    0 0 20px rgba(255, 255, 255, 0.7);
-}
-
-/* BLUR SOLO PARA MODO LIGHT */
-
-body.light-mode #inicio article {
-  position: relative;
-
-  max-width: 800px;
-
-  padding: 3rem;
-
-  z-index: 1;
-}
-
-body.light-mode #inicio article::before {
-  content: "";
-
-  position: absolute;
-
-  inset: -40px;
-
-  z-index: -1;
-
-  border-radius: 20%;
-
-  backdrop-filter: blur(0.2px);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.30) 0%,
-      rgba(255, 255, 255, 0.15) 30%,
-      rgba(255, 255, 255, 0.05) 50%,
-      transparent 55%
-    );
-}
-
-body.light-mode #inicio a:last-of-type {
-  background: rgba(255, 255, 255, 0.65);
-
-  backdrop-filter: blur(10px);
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  color: #111111;
-}
-
-/* ========================================= */
-/* FONDOS SECCIONES */
-/* ========================================= */
-
-body.light-mode #nosotros {
-  background: #edf0f2;
-}
-
-body.light-mode #beneficios {
-  background: #e4e8ec;
-}
-
-body.light-mode #planes {
-  background: #edf0f2;
-}
-
-body.light-mode #galeria {
-  background: #e4e8ec;
-}
-
-body.light-mode #horarios {
-  background: #edf0f2;
-}
-
-body.light-mode #reglamento {
-  background: #e4e8ec;
-}
-
-body.light-mode #contacto {
-  background: #edf0f2;
-}
-
-/* ========================================= */
-/* TITULOS GENERALES */
-/* ========================================= */
-
-body.light-mode section h2 {
-  color: #111111;
-}
-
-body.light-mode h3 {
-  color: var(--color-primary);
-}
-
-body.light-mode p {
-  color: #4f565c;
-}
-
-/* ========================================= */
-/* BOTON TEMA */
-/* ========================================= */
-
-body.light-mode #theme-toggle {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-
-  color: #111111;
-}
-
-/* ========================================= */
-/* SOBRE NOSOTROS */
-/* ========================================= */
-
-body.light-mode .section-tag {
-  background-color: rgba(255, 77, 94, 0.12);
-
-  color: #d93447;
-}
-
-body.light-mode .nosotros-intro,
-body.light-mode .gym-details,
-body.light-mode .coach-content p,
-body.light-mode .coach-stats span {
-  color: #101112;
-}
-
-body.light-mode .coach-card {
-  background:
-    linear-gradient(
-      145deg,
-      #e5e9ec,
-      #d6dde2
-    );
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.06);
-}
-
-body.light-mode .coach-content h3 {
-  color: #111111;
-}
-
-/* ========================================= */
-/* BENEFICIOS */
-/* ========================================= */
-
-body.light-mode .beneficio-card {
-  background:
-    linear-gradient(
-      145deg,
-      #e5e9ec,
-      #d6dde2
-    );
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-body.light-mode .beneficio-card h3 {
-  color: #111111;
-}
-
-body.light-mode .beneficio-card p {
-  color: #4f565c;
-}
-
-body.light-mode .beneficio-icon {
-  background-color: rgba(255, 77, 94, 0.1);
-
-  color: var(--color-primary);
-}
-
-/* ========================================= */
-/* PLANES */
-/* ========================================= */
-
-body.light-mode .plan-card {
-  background:
-    linear-gradient(
-      145deg,
-      #dde2e6,
-      #cfd6db
-    );
-
-  border: 1px solid rgba(0, 0, 0, 0.10);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-body.light-mode .plan-price {
-  color: #111111;
-}
-
-body.light-mode .plan-card li,
-body.light-mode .plan-subtitle,
-body.light-mode .plan-option span {
-  color: #42484d;
-}
-
-body.light-mode .plan-options {
-  border-top: 1px solid rgba(0, 0, 0, 0.10);
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-}
-
-body.light-mode .plan-option strong {
-  color: #111111;
-}
-
-/* ========================================= */
-/* HORARIOS */
-/* ========================================= */
-
-body.light-mode .horario-card {
-  background:
-    linear-gradient(
-      145deg,
-      #e5e9ec,
-      #d6dde2
-    );
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-body.light-mode .horario-info h3 {
-  color: #111111;
-}
-
-body.light-mode .horario-info p {
-  color: #4f565c;
-}
-
-body.light-mode .horario-icon {
-  background-color: rgba(255, 77, 94, 0.1);
-}
-
-/* ========================================= */
-/* CONTACTO */
-/* ========================================= */
-
-body.light-mode .contact-card {
-  background:
-    linear-gradient(
-      145deg,
-      #e5e9ec,
-      #d6dde2
-    );
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-body.light-mode .contact-card h3 {
-  color: #111111;
-}
-
-body.light-mode .contact-card a,
-body.light-mode .contact-card p {
-  color: #060707;
-}
-
-body.light-mode .contact-icon {
-  background-color: rgba(255, 77, 94, 0.1);
-}
-
-/* ========================================= */
-/* GALERIA */
-/* ========================================= */
-
-body.light-mode .galeria-container article,
-body.light-mode .galeria-container figure {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* ========================================= */
-/* FOOTER */
-/* ========================================= */
-
-body.light-mode footer {
-  background:
-    linear-gradient(
-      to bottom,
-      #dfe4e8,
-      #d1d7dc
-    );
-
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-body.light-mode .footer-copy,
-body.light-mode .footer-brand p {
-  color: #4f565c;
-}
-
-body.light-mode .social-icons a {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-
-  color: #111111;
-}
-
-body.light-mode .social-icons a:hover {
-  color: white;
-}
-/* ========================================= */
-/* RESPONSIVE */
-/* ========================================= */
-
-@media (max-width: 900px) {
-  header {
-    padding: 0.7rem 1rem;
-  }
-
-  nav {
-    display: grid;
-
-    grid-template-columns: 50px 1fr 50px;
-
-    align-items: center;
-
-    min-height: 60px;
-
-    position: relative;
-  }
-
-  #menu-toggle {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    background: transparent;
-
-    border: none;
-
-    color: var(--color-text);
-
-    font-size: 2rem;
-
-    cursor: pointer;
-
-    width: 40px;
-
-    height: 40px;
-  }
-
-  nav > a {
-    display: flex;
-
-    justify-content: center;
-  }
-
-  .logo {
-    width: 110px;
-
-    margin: 0 auto;
-  }
-
-  #theme-toggle {
-    width: 40px;
-    height: 40px;
-
-    font-size: 1rem;
-
-    justify-self: end;
-  }
-
-  .nav-links {
-    position: absolute;
-
-    top: 75px;
-    left: 0;
-
-    width: 230px;
-
-    padding: 1.5rem;
-
-    border-radius: 0 18px 18px 0;
-
-    background-color: var(--color-surface);
-
-    backdrop-filter: blur(10px);
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 1.2rem;
-
-    z-index: 999;
-
-    display: flex;
-
-    visibility: hidden;
-
-    opacity: 0;
-
-    pointer-events: none;
-
-    transition: all 0.3s ease;
-  }
-
-  .nav-links.active {
-    visibility: visible;
-
-    opacity: 1;
-
-    pointer-events: auto;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-
-    color: var(--color-text);
-  }
-
-  #inicio h1 {
-    font-size: 3rem;
-  }
-
-  #inicio p {
-    font-size: 1rem;
-  }
-
-  #inicio a {
-    display: block;
-
-    margin-bottom: 1rem;
-
-    width: fit-content;
-  }
-
-  .planes-container,
-  .galeria-container,
-  .contacto-container,
-  .reglamento-container {
-    grid-template-columns: 1fr;
-  }
-
-  .beneficios-container {
-    flex-direction: column;
-
-    align-items: center;
-  }
-
-  .footer-container {
-    gap: 3rem;
-
-    text-align: center;
-  }
-
-  .coach-highlight {
-    padding: 2rem;
-  }
-
-  .nosotros-content p,
-  .coach-highlight p {
-    font-size: 1rem;
-  }
-}
-
-/* ========================================= */
-/* SCROLL TOP */
+/* BOTÓN VOLVER ARRIBA */
 /* ========================================= */
 
 #scroll-top {
   position: fixed;
 
-  bottom: 25px;
   right: 25px;
+  bottom: 25px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 
   width: 55px;
   height: 55px;
 
   border: none;
-
   border-radius: 50%;
 
   background-color: var(--color-primary);
 
-  color: white;
+  color: #ffffff;
 
   font-size: 1.4rem;
 
   cursor: pointer;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
   opacity: 0;
-
   visibility: hidden;
 
-  transition: all 0.3s ease;
-
   z-index: 999;
+
+  transition: all 0.3s ease;
 }
 
 #scroll-top.show {
   opacity: 1;
-
   visibility: visible;
 }
 
@@ -1915,95 +1436,32 @@ body.light-mode .social-icons a:hover {
 }
 
 /* ========================================= */
-/* REGLAMENTO PREMIUM */
-/* ========================================= */
-
-.reglamento-intro {
-  text-align: center;
-
-  max-width: 800px;
-
-  margin:
-    0 auto
-    4rem;
-
-  color: var(--color-text-secondary);
-
-  font-size: 1.1rem;
-}
-
-.reglamento-list {
-  max-width: 950px;
-
-  margin: 0 auto;
-}
-
-.regla-item {
-  display: flex;
-
-  gap: 2rem;
-
-  align-items: flex-start;
-
-  padding: 2.5rem 0;
-
-  border-bottom: 1px solid rgba(255,255,255,.08);
-
-  transition: all .3s ease;
-}
-
-.regla-item:hover {
-  transform: translateX(8px);
-}
-
-.regla-numero {
-  font-size: 3rem;
-
-  font-weight: 800;
-
-  color: rgba(238, 21, 43, 0.25);
-
-  min-width: 80px;
-}
-
-.regla-contenido h3 {
-  margin-bottom: 1rem;
-
-  color: var(--color-primary);
-
-  font-size: 1.4rem;
-}
-
-.regla-contenido p {
-  color: var(--color-text-secondary);
-
-  line-height: 1.8;
-}
-
-/* ========================================= */
-/* ACCESIBILIDAD */
+/* PANEL DE ACCESIBILIDAD */
 /* ========================================= */
 
 .accessibility-container {
   position: relative;
 }
 
+/* BOTÓN PRINCIPAL */
+
 #accessibility-toggle {
   width: 52px;
   height: 52px;
 
   border: none;
-
   border-radius: 50%;
 
   background: var(--color-primary);
 
-  color: white;
+  color: #ffffff;
 
   font-size: 1.5rem;
 
   cursor: pointer;
 }
+
+/* PANEL */
 
 .accessibility-panel {
   position: absolute;
@@ -2011,8 +1469,7 @@ body.light-mode .social-icons a:hover {
   top: 75px;
   right: 0;
 
-  width: 340px; /* antes 420px */
-
+  width: 340px;
   max-height: 80vh;
 
   overflow-y: auto;
@@ -2023,33 +1480,32 @@ body.light-mode .social-icons a:hover {
 
   background: var(--color-surface);
 
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 
   opacity: 0;
-
   visibility: hidden;
 
   pointer-events: none;
 
+  z-index: 9999;
+
   transition: 0.3s;
 
-  z-index: 9999;
+  scrollbar-width: thin;
 }
 
 .accessibility-panel.active {
   opacity: 1;
-
   visibility: visible;
-
   pointer-events: auto;
 }
+
+/* CABECERA */
 
 .accessibility-header {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 }
 
@@ -2062,16 +1518,17 @@ body.light-mode .social-icons a:hover {
 }
 
 .accessibility-title i {
-  font-size: 2rem;
-
   color: var(--color-primary);
+
+  font-size: 2rem;
 }
+
+/* OPCIONES */
 
 .accessibility-option {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 
   margin: 1.2rem 0;
@@ -2089,21 +1546,19 @@ body.light-mode .social-icons a:hover {
 
 .option-info i,
 .text-icon {
-  font-size: 2rem;
-
   color: var(--color-primary);
+
+  font-size: 2rem;
 }
 
 .accessibility-option button {
   width: 55px;
-
   height: 55px;
 
+  border: none;
   border-radius: 18px;
 
-  border: none;
-
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
   color: var(--color-primary);
 
@@ -2112,22 +1567,47 @@ body.light-mode .social-icons a:hover {
   cursor: pointer;
 }
 
+/* BOTÓN CERRAR */
+
 #close-accessibility {
   width: auto;
   height: auto;
 
+  padding: 0;
+
+  border: none;
+
   background: transparent;
 
+  box-shadow: none;
+
+  color: var(--color-primary);
+
   font-size: 2rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
+#close-accessibility:hover {
+  color: #ff7080;
+
+  transform: rotate(90deg);
+}
+
+#close-accessibility i {
+  color: inherit;
+}
+
+/* ========================================= */
 /* SWITCH */
+/* ========================================= */
 
 .switch {
   position: relative;
 
   width: 60px;
-
   height: 34px;
 }
 
@@ -2140,9 +1620,9 @@ body.light-mode .social-icons a:hover {
 
   inset: 0;
 
-  background: #ccc;
-
   border-radius: 50px;
+
+  background: #cccccc;
 
   cursor: pointer;
 }
@@ -2152,17 +1632,17 @@ body.light-mode .social-icons a:hover {
 
   position: absolute;
 
+  top: 4px;
+  left: 4px;
+
   width: 26px;
   height: 26px;
 
-  left: 4px;
-  top: 4px;
-
-  background: white;
-
   border-radius: 50%;
 
-  transition: .3s;
+  background: #ffffff;
+
+  transition: 0.3s;
 }
 
 .switch input:checked + .slider {
@@ -2172,8 +1652,9 @@ body.light-mode .social-icons a:hover {
 .switch input:checked + .slider::before {
   transform: translateX(26px);
 }
+
 /* ========================================= */
-/* CONTROL DE TAMAÑO DE FUENTE */
+/* TAMAÑO DE FUENTE */
 /* ========================================= */
 
 .font-size-control {
@@ -2187,13 +1668,13 @@ body.light-mode .social-icons a:hover {
 
   border-radius: 14px;
 
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .font-size-control label {
-  font-weight: 600;
-
   color: var(--color-text);
+
+  font-weight: 600;
 }
 
 #font-slider {
@@ -2207,15 +1688,19 @@ body.light-mode .social-icons a:hover {
 #font-value {
   text-align: center;
 
-  font-weight: bold;
-
   color: var(--color-primary);
+
+  font-weight: bold;
 }
 
+/* ========================================= */
+/* ALTO CONTRASTE */
+/* ========================================= */
+
 body.high-contrast:not(.light-mode) {
-  --color-background: #000;
-  --color-surface: #111;
-  --color-text: #fff;
+  --color-background: #000000;
+  --color-surface: #111111;
+  --color-text: #ffffff;
   --color-text-secondary: #f0f0f0;
 }
 
@@ -2248,152 +1733,427 @@ body.high-contrast .coach-card {
   border: 3px solid var(--color-primary) !important;
 }
 
-html {
-  transition: font-size 0.3s ease;
-}
-
 /* ========================================= */
-/* BOTÓN CERRAR PANEL ACCESIBILIDAD */
+/* FOOTER */
 /* ========================================= */
 
-#close-accessibility {
-  background: transparent;
+footer {
+  padding: 5rem 2rem 2rem;
 
-  border: none;
+  background: linear-gradient(
+    to bottom,
+    #050505,
+    #0a0a0a
+  );
 
-  box-shadow: none;
-
-  color: #ff4d5e;
-
-  font-size: 2rem;
-
-  cursor: pointer;
-
-  width: auto;
-
-  height: auto;
-
-  padding: 0;
-
-  transition: all 0.3s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-#close-accessibility:hover {
-  color: #ff7080;
-
-  transform: rotate(90deg);
-}
-
-#close-accessibility i {
-  color: inherit;
-}
-
-/* ========================================= */
-/* CARRUSEL GALERÍA */
-/* ========================================= */
-
-.carousel {
-  position: relative;
-
-  width: 100%;
-
-  max-width: 1100px;
-
-  margin: 3rem auto 0;
-}
-
-.carousel-track-container {
-  overflow: hidden;
-
-  border-radius: 25px;
-}
-
-.carousel-track {
+.footer-container {
   display: flex;
 
-  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12rem;
 }
 
-.slide {
-  min-width: 100%;
+.footer-logo {
+  width: 280px;
 
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
-.slide img {
-  width: 100%;
+.footer-brand p {
+  color: var(--color-text-secondary);
 
-  height: 500px;
-
-  object-fit: cover;
-
-  display: block;
-
-  border-radius: 25px;
+  font-size: 1.1rem;
 }
 
-.carousel-btn {
-  position: absolute;
+footer h3 {
+  margin-bottom: 1rem;
 
-  top: 50%;
+  color: var(--color-primary);
 
-  transform: translateY(-50%);
+  font-size: 2rem;
+}
 
-  width: 55px;
+/* REDES */
 
-  height: 55px;
+.social-icons {
+  display: flex;
 
-  border: none;
+  gap: 1rem;
+}
 
+.social-icons a {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  background: rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem;
 
-  color: white;
-
-  font-size: 1.8rem;
-
-  cursor: pointer;
-
-  z-index: 10;
-
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.carousel-btn:hover {
-  background: var(--color-primary);
+.social-icons a:hover {
+  background-color: var(--color-primary);
+
+  border-color: var(--color-primary);
+
+  transform: translateY(-4px);
 }
 
-.prev {
-  left: 20px;
+.footer-copy {
+  margin-top: 4rem;
+
+  text-align: center;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
 }
 
-.next {
-  right: 20px;
+/* ========================================= */
+/* MODO CLARO */
+/* ========================================= */
+
+body.light-mode {
+  --color-background: #dde2e6;
+  --color-surface: #eceff1;
+
+  --color-text: #111111;
+  --color-text-secondary: #4f565c;
+
+  background: radial-gradient(
+    circle at top,
+    #eef1f3 0%,
+    #dde2e6 100%
+  );
 }
 
-header {
-  position: sticky;
+/* HEADER */
 
-  top: 0;
+body.light-mode header {
+  background: rgba(255, 255, 255, 0.82);
 
-  z-index: 1000;
+  backdrop-filter: blur(18px);
 
-  transition: transform 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-header.hide-navbar {
-  transform: translateY(-100%);
+/* NAV */
+
+body.light-mode nav a {
+  color: #1a1a1a;
 }
 
-h1,
-h2,
-h3,
-nav a,
-.plan-price,
-.section-tag,
-.coach-label {
-  font-family: "Bebas Neue", sans-serif;
+body.light-mode nav a:hover {
+  color: var(--color-primary);
+}
 
-  letter-spacing: 1px;
+/* BOTÓN TEMA */
+
+body.light-mode #theme-toggle {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  color: #111111;
+}
+
+/* TÍTULOS Y TEXTO */
+
+body.light-mode section h2 {
+  color: #111111;
+}
+
+body.light-mode h3 {
+  color: var(--color-primary);
+}
+
+body.light-mode p {
+  color: #4f565c;
+}
+
+/* FOOTER */
+
+body.light-mode footer {
+  background: linear-gradient(
+    to bottom,
+    #dfe4e8,
+    #d1d7dc
+  );
+
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .footer-copy,
+body.light-mode .footer-brand p {
+  color: #4f565c;
+}
+
+body.light-mode .social-icons a {
+  color: #111111;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .social-icons a:hover {
+  color: #ffffff;
+}
+
+/* ========================================= */
+/* MODO CLARO - HERO */
+/* ========================================= */
+
+body.light-mode #inicio::before {
+  background: linear-gradient(
+    to right,
+    rgba(248, 249, 250, 0.4),
+    rgba(248, 249, 250, 0.2),
+    rgba(248, 249, 250, 0.08)
+  );
+}
+
+body.light-mode #inicio h1 {
+  color: #111111;
+}
+
+body.light-mode #inicio p {
+  color: #111111;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  text-shadow:
+    0 2px 8px rgba(255, 255, 255, 0.95),
+    0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* EFECTO GLASSMORPHISM */
+
+body.light-mode #inicio article {
+  position: relative;
+
+  max-width: 800px;
+
+  padding: 3rem;
+
+  z-index: 1;
+}
+
+body.light-mode #inicio article::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -40px;
+
+  z-index: -1;
+
+  border-radius: 20%;
+
+  backdrop-filter: blur(0.2px);
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 55%
+  );
+}
+
+body.light-mode #inicio a:last-of-type {
+  background: rgba(255, 255, 255, 0.65);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  color: #111111;
+}
+
+/* ========================================= */
+/* MODO CLARO - FONDOS DE SECCIONES */
+/* ========================================= */
+
+body.light-mode #nosotros,
+body.light-mode #planes,
+body.light-mode #contacto {
+  background: #edf0f2;
+}
+
+body.light-mode #beneficios,
+body.light-mode #galeria,
+body.light-mode #reglamento {
+  background: #e4e8ec;
+}
+
+body.light-mode #horarios {
+  background: #edf0f2;
+}
+
+/* ========================================= */
+/* MODO CLARO - SOBRE NOSOTROS */
+/* ========================================= */
+
+body.light-mode .section-tag {
+  background-color: rgba(255, 77, 94, 0.12);
+
+  color: #d93447;
+}
+
+body.light-mode .nosotros-intro,
+body.light-mode .gym-details,
+body.light-mode .coach-content p,
+body.light-mode .coach-stats span {
+  color: #101112;
+}
+
+body.light-mode .coach-card {
+  background: linear-gradient(
+    145deg,
+    #e5e9ec,
+    #d6dde2
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .coach-content h3 {
+  color: #111111;
+}
+
+/* ========================================= */
+/* MODO CLARO - BENEFICIOS */
+/* ========================================= */
+
+body.light-mode .beneficio-card {
+  background: linear-gradient(
+    145deg,
+    #e5e9ec,
+    #d6dde2
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .beneficio-card h3 {
+  color: #111111;
+}
+
+body.light-mode .beneficio-card p {
+  color: #4f565c;
+}
+
+body.light-mode .beneficio-card svg {
+  stroke: var(--color-primary);
+}
+
+/* ========================================= */
+/* MODO CLARO - PLANES */
+/* ========================================= */
+
+body.light-mode .plan-card {
+  background: linear-gradient(
+    145deg,
+    #dde2e6,
+    #cfd6db
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .plan-price,
+body.light-mode .plan-option strong {
+  color: #111111;
+}
+
+body.light-mode .plan-card li,
+body.light-mode .plan-subtitle,
+body.light-mode .plan-option span {
+  color: #42484d;
+}
+
+body.light-mode .plan-options {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================= */
+/* MODO CLARO - HORARIOS */
+/* ========================================= */
+
+body.light-mode .horario-card {
+  background: linear-gradient(
+    145deg,
+    #e5e9ec,
+    #d6dde2
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .horario-info h3 {
+  color: #111111;
+}
+
+body.light-mode .horario-info p {
+  color: #4f565c;
+}
+
+body.light-mode .horario-icon {
+  background-color: rgba(255, 77, 94, 0.1);
+}
+
+/* ========================================= */
+/* MODO CLARO - CONTACTO */
+/* ========================================= */
+
+body.light-mode .contact-card {
+  background: linear-gradient(
+    145deg,
+    #e5e9ec,
+    #d6dde2
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .contact-card h3 {
+  color: #111111;
+}
+
+body.light-mode .contact-card a,
+body.light-mode .contact-card address {
+  color: #060707;
+}
+
+body.light-mode .contact-icon {
+  background-color: rgba(255, 77, 94, 0.1);
 }

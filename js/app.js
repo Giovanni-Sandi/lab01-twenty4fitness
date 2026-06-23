@@ -156,6 +156,17 @@ readPage.addEventListener("change", () => {
   }
 });
 
+/* CERRAR MENÚ AL SELECCIONAR UNA OPCIÓN */
+
+const menuItems = document.querySelectorAll(".nav-links a");
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
 /* ========================================= */
 /* TAMAÑO DE TEXTO */
 /* ========================================= */

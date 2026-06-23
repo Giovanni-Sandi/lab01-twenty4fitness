@@ -1,4 +1,11 @@
+/* ========================================= */
+/* TABLETS Y PANTALLAS MEDIANAS (992px) */
+/* ========================================= */
+
 @media (max-width: 992px) {
+
+  /* ---------- NAVEGACIÓN ---------- */
+
   nav {
     flex-direction: column;
     gap: 1.5rem;
@@ -9,77 +16,134 @@
     justify-content: center;
   }
 
+  /* ---------- HERO ---------- */
+
   #inicio h1 {
     font-size: 3rem;
   }
 
+  /* ---------- BENEFICIOS ---------- */
+
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---------- PLANES ---------- */
+
   .planes-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .galeria-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 4rem 1.5rem;
-  }
-
-  #inicio {
-    text-align: center;
-    justify-content: center;
-  }
-
-  #inicio h1 {
-    font-size: 2.5rem;
-  }
-
-  #inicio a {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .beneficios-container,
-  .horarios-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .planes-container,
-  .galeria-container {
-    grid-template-columns: 1fr;
-  }
-
-  #contacto {
-    flex-direction: column;
-  }
-
-  .reglamento-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  nav ul {
-    gap: 1rem;
-  }
-
-  #inicio h1 {
-    font-size: 2rem;
-  }
-
-  section h2 {
-    font-size: 2rem;
-  }
 }
 
 /* ========================================= */
-/* RESPONSIVE NOSOTROS */
+/* DISPOSITIVOS MÓVILES (900px) */
 /* ========================================= */
 
 @media (max-width: 900px) {
+
+  /* ---------- HEADER ---------- */
+
+  header {
+    padding: 0.7rem 1rem;
+  }
+
+  nav {
+    display: grid;
+
+    grid-template-columns: 50px 1fr 50px;
+
+    align-items: center;
+
+    min-height: 60px;
+
+    position: relative;
+  }
+
+  nav > a {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ---------- LOGO ---------- */
+
+  .logo {
+    width: 110px;
+    margin: 0 auto;
+  }
+
+  /* ---------- MENÚ HAMBURGUESA ---------- */
+
+  #menu-toggle {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ---------- BOTÓN TEMA ---------- */
+
+  #theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    justify-self: end;
+
+    font-size: 1rem;
+  }
+
+  /* ---------- MENÚ MOBILE ---------- */
+
+  .nav-links {
+    position: absolute;
+
+    top: 75px;
+    left: 0;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.2rem;
+
+    width: 230px;
+
+    padding: 1.5rem;
+
+    border-radius: 0 18px 18px 0;
+
+    background-color: var(--color-surface);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    color: var(--color-text);
+
+    font-size: 1rem;
+  }
+
+  /* ---------- NOSOTROS ---------- */
+
   .nosotros-header h2 {
     font-size: 3rem;
   }
@@ -107,38 +171,54 @@
   .coach-stats {
     gap: 2rem;
   }
-}
 
-@media (max-width: 600px) {
-  .gym-details {
-    flex-direction: column;
-  }
+  /* ---------- FOOTER ---------- */
 
-  .detail-divider {
-    display: none;
-  }
-
-  .coach-image {
-    height: 320px;
-  }
-
-  .coach-stats {
-    flex-direction: column;
-  }
-
-  .nosotros-header h2 {
-    font-size: 2.4rem;
+  .footer-container {
+    gap: 3rem;
+    text-align: center;
   }
 }
 
-@media (max-width: 992px) {
-  .beneficios-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* ========================================= */
+/* MÓVILES Y TABLETS PEQUEÑAS (768px) */
+/* ========================================= */
 
 @media (max-width: 768px) {
-  .beneficios-container {
+
+  /* ---------- SECCIONES ---------- */
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  /* ---------- HERO ---------- */
+
+  #inicio {
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  #inicio h1 {
+    font-size: 2.5rem;
+  }
+
+  #inicio a {
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto 1rem;
+  }
+
+  /* ---------- BENEFICIOS ---------- */
+
+  .beneficios-grid {
     grid-template-columns: 1fr;
   }
 
@@ -147,9 +227,22 @@
 
     margin: 0 auto;
   }
-}
 
-@media (max-width: 768px) {
+  /* ---------- PLANES ---------- */
+
+  .planes-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------- HORARIOS ---------- */
+
+  .horarios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ---------- REGLAMENTO ---------- */
+
   .regla-item {
     flex-direction: column;
 
@@ -159,42 +252,45 @@
   .regla-numero {
     font-size: 2.5rem;
   }
-}
 
-/* ========================================= */
-/* RESPONSIVE PANEL DE ACCESIBILIDAD */
-/* ========================================= */
+  /* ---------- CONTACTO ---------- */
 
-@media (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------- CARRUSEL ---------- */
+
+  .slide img {
+    height: 350px;
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+
+    font-size: 1.4rem;
+  }
+
+  /* ---------- PANEL ACCESIBILIDAD ---------- */
 
   .accessibility-panel {
-
-    /* Modal centrado horizontalmente */
-
     position: fixed;
 
-    left: 50%;
     top: 1rem;
+    left: 50%;
 
     transform: translateX(-50%);
 
-    /* Tamaño adaptable */
-
     width: min(92vw, 340px);
 
-    /* Nunca ocupar más del 85% de la altura */
-
     max-height: 85vh;
-
-    overflow-y: auto;
-
-    /* Espaciado interno */
 
     padding: 1.5rem;
 
     border-radius: 24px;
 
-    /* Mantenerlo encima de todo */
+    overflow-y: auto;
 
     z-index: 99999;
   }
@@ -226,9 +322,9 @@
     width: 46px;
     height: 46px;
 
-    font-size: 1.4rem;
-
     border-radius: 14px;
+
+    font-size: 1.4rem;
   }
 
   .switch {
@@ -237,18 +333,18 @@
   }
 
   .slider::before {
-    width: 22px;
-    height: 22px;
-
     top: 4px;
     left: 4px;
+
+    width: 22px;
+    height: 22px;
   }
 
   .switch input:checked + .slider::before {
     transform: translateX(22px);
   }
 
-  /* Scroll elegante */
+  /* ---------- SCROLL PANEL ---------- */
 
   .accessibility-panel::-webkit-scrollbar {
     width: 6px;
@@ -259,25 +355,50 @@
 
     border-radius: 10px;
   }
-
-}
-.accessibility-panel {
-  overflow-y: auto;
-
-  scrollbar-width: thin;
 }
 
-@media (max-width: 768px) {
+/* ========================================= */
+/* MÓVILES PEQUEÑOS (600px) */
+/* ========================================= */
 
-  .slide img {
-    height: 350px;
+@media (max-width: 600px) {
+
+  .gym-details {
+    flex-direction: column;
   }
 
-  .carousel-btn {
-    width: 45px;
-    height: 45px;
-
-    font-size: 1.4rem;
+  .detail-divider {
+    display: none;
   }
 
+  .coach-image {
+    height: 320px;
+  }
+
+  .coach-stats {
+    flex-direction: column;
+  }
+
+  .nosotros-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* ========================================= */
+/* MÓVILES MUY PEQUEÑOS (480px) */
+/* ========================================= */
+
+@media (max-width: 480px) {
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
 }
