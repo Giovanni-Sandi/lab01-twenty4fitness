@@ -80,7 +80,6 @@
 /* ========================================= */
 
 @media (max-width: 900px) {
-
   .nosotros-header h2 {
     font-size: 3rem;
   }
@@ -111,7 +110,6 @@
 }
 
 @media (max-width: 600px) {
-
   .gym-details {
     flex-direction: column;
   }
@@ -152,7 +150,6 @@
 }
 
 @media (max-width: 768px) {
-
   .regla-item {
     flex-direction: column;
 
@@ -162,4 +159,110 @@
   .regla-numero {
     font-size: 2.5rem;
   }
+}
+
+/* ========================================= */
+/* RESPONSIVE PANEL DE ACCESIBILIDAD */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  .accessibility-panel {
+
+    /* Modal centrado horizontalmente */
+
+    position: fixed;
+
+    left: 50%;
+    top: 1rem;
+
+    transform: translateX(-50%);
+
+    /* Tamaño adaptable */
+
+    width: min(92vw, 340px);
+
+    /* Nunca ocupar más del 85% de la altura */
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    /* Espaciado interno */
+
+    padding: 1.5rem;
+
+    border-radius: 24px;
+
+    /* Mantenerlo encima de todo */
+
+    z-index: 99999;
+  }
+
+  .accessibility-header {
+    margin-bottom: 1rem;
+  }
+
+  .accessibility-title h3 {
+    font-size: 1.6rem;
+  }
+
+  .accessibility-option {
+    margin: 1.2rem 0;
+  }
+
+  .option-info {
+    gap: 0.8rem;
+
+    font-size: 1rem;
+  }
+
+  .option-info i,
+  .text-icon {
+    font-size: 1.5rem;
+  }
+
+  .accessibility-option button {
+    width: 46px;
+    height: 46px;
+
+    font-size: 1.4rem;
+
+    border-radius: 14px;
+  }
+
+  .switch {
+    width: 52px;
+    height: 30px;
+  }
+
+  .slider::before {
+    width: 22px;
+    height: 22px;
+
+    top: 4px;
+    left: 4px;
+  }
+
+  .switch input:checked + .slider::before {
+    transform: translateX(22px);
+  }
+
+  /* Scroll elegante */
+
+  .accessibility-panel::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .accessibility-panel::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+
+    border-radius: 10px;
+  }
+
+}
+.accessibility-panel {
+  overflow-y: auto;
+
+  scrollbar-width: thin;
 }
