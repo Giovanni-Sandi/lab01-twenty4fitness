@@ -225,55 +225,23 @@ contrastToggle.addEventListener("change", () => {
 /* CARRUSEL GALERÍA */
 /* ========================================= */
 
-const track =
-  document.querySelector(".carousel-track");
-
-const slides =
-  Array.from(document.querySelectorAll(".slide"));
-
-const nextButton =
-  document.querySelector(".next");
-
-const prevButton =
-  document.querySelector(".prev");
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".slide");
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
 
 let currentIndex = 0;
+let autoSlide;
+
+/* MOVER CARRUSEL */
 
 function updateCarousel() {
-
-  track.style.transform =
-    `translateX(-${currentIndex * 100}%)`;
-
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-nextButton.addEventListener("click", () => {
-
-  currentIndex++;
-
-  if (currentIndex >= slides.length) {
-    currentIndex = 0;
-  }
-
-  updateCarousel();
-
-});
-
-prevButton.addEventListener("click", () => {
-
-  currentIndex--;
-
-  if (currentIndex < 0) {
-    currentIndex = slides.length - 1;
-  }
-
-  updateCarousel();
-
-});
-
-let autoSlide = setInterval(nextSlide, 4000);
+/* SIGUIENTE */
 
 function nextSlide() {
-
   currentIndex++;
 
   if (currentIndex >= slides.length) {
@@ -283,18 +251,9 @@ function nextSlide() {
   updateCarousel();
 }
 
-nextButton.addEventListener("click", () => {
+/* ANTERIOR */
 
-  nextSlide();
-
-  clearInterval(autoSlide);
-
-  autoSlide = setInterval(nextSlide, 4000);
-
-});
-
-prevButton.addEventListener("click", () => {
-
+function prevSlide() {
   currentIndex--;
 
   if (currentIndex < 0) {
@@ -302,11 +261,53 @@ prevButton.addEventListener("click", () => {
   }
 
   updateCarousel();
+}
 
+/* REINICIAR AUTO PLAY */
+
+function resetAutoSlide() {
   clearInterval(autoSlide);
 
   autoSlide = setInterval(nextSlide, 4000);
+}
 
+/* EVENTOS BOTONES */
+
+nextButton.addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
 });
 
+prevButton.addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
+});
+
+/* INICIAR */
+
 autoSlide = setInterval(nextSlide, 4000);
+
+/* ========================================= */
+/* SWIPE MÓVIL */
+/* ========================================= */
+
+let startX = 0;
+let endX = 0;
+
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) {
+    nextSlide();
+    resetAutoSlide();
+  }
+
+  if (endX - startX > 50) {
+    prevSlide();
+    resetAutoSlide();
+  }
+});
