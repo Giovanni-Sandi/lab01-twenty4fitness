@@ -446,8 +446,6 @@ nav a:hover::after {
 .section-tag {
   display: inline-block;
 
-  margin-bottom: 1.5rem;
-
   padding: 0.8rem 1.5rem;
 
   border-radius: 999px;
@@ -456,10 +454,13 @@ nav a:hover::after {
 
   color: var(--color-primary);
 
-  font-size: 0.8rem;
+  font-size: 2.2rem;
+
   font-weight: 700;
 
   letter-spacing: 2px;
+
+  margin-bottom: 1.5rem;
 }
 
 .nosotros-header h2 {
@@ -2167,4 +2168,33 @@ body.light-mode .contact-card address {
 
 body.light-mode .contact-icon {
   background-color: rgba(255, 77, 94, 0.1);
+}
+
+/* ========================================= */
+/* PREVENIR DESBORDAMIENTO HORIZONTAL */
+/* ========================================= */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  background-color: #0a0a0a;
+}
+
+/* ========================================= */
+/* FONDO REBOTE MODO CLARO */
+/* ========================================= */
+
+body.light-mode::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  
+  background-color: #dfe4e8;
+
+  z-index: -9999;
 }
