@@ -266,3 +266,18 @@
 
   scrollbar-width: thin;
 }
+
+@media (max-width: 768px) {
+
+  .slide img {
+    height: 350px;
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+
+    font-size: 1.4rem;
+  }
+
+}

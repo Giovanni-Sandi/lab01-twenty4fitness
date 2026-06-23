@@ -72,22 +72,25 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
-/* OCULTAR NAVBAR AL BAJAR */
+
+/* ========================================= */
+/* NAVBAR SOLO VISIBLE EN LA PARTE SUPERIOR */
+/* ========================================= */
 
 const header = document.querySelector("header");
 
-let lastScroll = 0;
-
 window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
 
-  if (currentScroll > lastScroll && currentScroll > 100) {
-    header.classList.add("hide-navbar");
-  } else {
+  if (window.scrollY === 0) {
+
     header.classList.remove("hide-navbar");
+
+  } else {
+
+    header.classList.add("hide-navbar");
+
   }
 
-  lastScroll = currentScroll;
 });
 
 /* MENU MOBILE */
@@ -206,3 +209,93 @@ const contrastToggle = document.getElementById("contrast-toggle");
 contrastToggle.addEventListener("change", () => {
   document.body.classList.toggle("high-contrast");
 });
+
+/* ========================================= */
+/* CARRUSEL GALERÍA */
+/* ========================================= */
+
+const track =
+  document.querySelector(".carousel-track");
+
+const slides =
+  Array.from(document.querySelectorAll(".slide"));
+
+const nextButton =
+  document.querySelector(".next");
+
+const prevButton =
+  document.querySelector(".prev");
+
+let currentIndex = 0;
+
+function updateCarousel() {
+
+  track.style.transform =
+    `translateX(-${currentIndex * 100}%)`;
+
+}
+
+nextButton.addEventListener("click", () => {
+
+  currentIndex++;
+
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+
+  updateCarousel();
+
+});
+
+prevButton.addEventListener("click", () => {
+
+  currentIndex--;
+
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+
+  updateCarousel();
+
+});
+
+let autoSlide = setInterval(nextSlide, 4000);
+
+function nextSlide() {
+
+  currentIndex++;
+
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+
+  updateCarousel();
+}
+
+nextButton.addEventListener("click", () => {
+
+  nextSlide();
+
+  clearInterval(autoSlide);
+
+  autoSlide = setInterval(nextSlide, 4000);
+
+});
+
+prevButton.addEventListener("click", () => {
+
+  currentIndex--;
+
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+
+  updateCarousel();
+
+  clearInterval(autoSlide);
+
+  autoSlide = setInterval(nextSlide, 4000);
+
+});
+
+autoSlide = setInterval(nextSlide, 4000);

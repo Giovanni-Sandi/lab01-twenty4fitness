@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <link rel="stylesheet" href="./css/responsive.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -552,63 +561,78 @@
       </section>
 
       <!-- GALERÍA -->
-
       <section id="galeria" aria-labelledby="galeria-title">
         <div class="container">
-          <!-- TÍTULO -->
+          <h2 id="galeria-title">Galería</h2>
 
-          <h2 id="galeria-title">Nuestras Instalaciones</h2>
+          <div class="carousel">
+            <button
+              class="carousel-btn prev"
+              aria-label="Imagen anterior"
+              type="button"
+            >
+              &#10094;
+            </button>
 
-          <!-- IMÁGENES -->
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <figure class="slide" tabindex="0">
+                  <img
+                    src="./img/galeria/gym-1.jpg"
+                    alt="Área principal de entrenamiento de Twenty4 Fitness"
+                    loading="lazy"
+                  />
+                </figure>
 
-          <div class="galeria-container">
-            <figure tabindex="0">
-              <img
-                src="./img/galeria/gym-1.jpg"
-                alt="Área de pesas de Twenty4 Fitness"
-                loading="lazy"
-              />
-            </figure>
+                <figure class="slide" tabindex="0">
+                  <img
+                    src="./img/galeria/gym-2.jpg"
+                    alt="Zona de máquinas y equipamiento moderno del gimnasio"
+                    loading="lazy"
+                  />
+                </figure>
 
-            <figure tabindex="0">
-              <img
-                src="./img/galeria/gym-2.jpg"
-                alt="Máquinas de entrenamiento del gimnasio"
-                loading="lazy"
-              />
-            </figure>
+                <figure class="slide" tabindex="0">
+                  <img
+                    src="./img/galeria/gym-3.jpg"
+                    alt="Espacio de entrenamiento funcional de Twenty4 Fitness"
+                    loading="lazy"
+                  />
+                </figure>
 
-            <figure tabindex="0">
-              <img
-                src="./img/galeria/gym-3.jpg"
-                alt="Recepción principal de Twenty4 Fitness"
-                loading="lazy"
-              />
-            </figure>
+                <figure class="slide" tabindex="0">
+                  <img
+                    src="./img/galeria/gym-4.jpg"
+                    alt="Instalaciones interiores del gimnasio Twenty4 Fitness"
+                    loading="lazy"
+                  />
+                </figure>
 
-            <figure tabindex="0">
-              <img
-                src="./img/galeria/gym-4.jpg"
-                alt="Área de bicicletas y cardio"
-                loading="lazy"
-              />
-            </figure>
+                <figure class="slide" tabindex="0">
+                  <img
+                    src="./img/galeria/gym-5.jpg"
+                    alt="Área de pesas y musculación del gimnasio"
+                    loading="lazy"
+                  />
+                </figure>
 
-            <figure tabindex="0">
-              <img
-                src="./img/galeria/gym-5.jpg"
-                alt="Zona de bebidas energéticas y snacks"
-                loading="lazy"
-              />
-            </figure>
+                <figure class="slide" tabindex="0">
+                  <img
+                    src="./img/galeria/gym-6.jpg"
+                    alt="Vista general de las instalaciones de Twenty4 Fitness"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
 
-            <figure tabindex="0">
-              <img
-                src="./img/galeria/gym-6.jpg"
-                alt="Fachada exterior de Twenty4 Fitness"
-                loading="lazy"
-              />
-            </figure>
+            <button
+              class="carousel-btn next"
+              aria-label="Siguiente imagen"
+              type="button"
+            >
+              &#10095;
+            </button>
           </div>
         </div>
       </section>
