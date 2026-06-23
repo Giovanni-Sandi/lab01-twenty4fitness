@@ -1168,28 +1168,19 @@ nav a:hover::after {
   background-color: #111111;
 }
 
-/* ========================================= */
-/* INTRODUCCIÓN */
-/* ========================================= */
-
-.reglamento-intro {
-  max-width: 800px;
-
-  margin: 0 auto 4rem;
-
-  text-align: center;
-
-  color: var(--color-text-secondary);
-
-  font-size: 1.1rem;
-}
 
 /* ========================================= */
 /* LISTA DE REGLAS */
 /* ========================================= */
 
 .reglamento-list {
-  max-width: 950px;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem 4rem;
+
+  max-width: 1200px;
 
   margin: 0 auto;
 }
@@ -1201,16 +1192,23 @@ nav a:hover::after {
 .regla-item {
   display: flex;
 
-  align-items: flex-start;
-
   gap: 2rem;
 
-  padding: 2.5rem 0;
+  align-items: flex-start;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
 
-  transition:
-    transform 0.3s ease;
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(28, 28, 28, 0.98),
+    rgba(15, 15, 15, 1)
+  );
+
+  transition: all .3s ease;
 }
 
 .regla-item:hover {
@@ -1222,12 +1220,13 @@ nav a:hover::after {
 /* ========================================= */
 
 .regla-numero {
-  min-width: 80px;
-
-  color: rgba(238, 21, 43, 0.25);
-
   font-size: 3rem;
+
   font-weight: 800;
+
+  color: rgba(255, 77, 94, 0.85);
+
+  min-width: 80px;
 }
 
 /* ========================================= */
@@ -1812,87 +1811,14 @@ body.high-contrast .coach-card {
 /* ========================================= */
 
 footer {
-  padding: 5rem 2rem 2rem;
+  background: linear-gradient(to bottom, #050505, #0a0a0a);
 
-  background: linear-gradient(
-    to bottom,
-    #050505,
-    #0a0a0a
-  );
+  padding: 1.5rem 2rem;
 
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footer-container {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 12rem;
-}
-
-.footer-logo {
-  width: 280px;
-
-  margin-bottom: 1rem;
-}
-
-.footer-brand p {
-  color: var(--color-text-secondary);
-
-  font-size: 1.1rem;
-}
-
-footer h3 {
-  margin-bottom: 1rem;
-
-  color: var(--color-primary);
-
-  font-size: 2rem;
-}
-
-/* REDES */
-
-.social-icons {
-  display: flex;
-
-  gap: 1rem;
-}
-
-.social-icons a {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  width: 50px;
-  height: 50px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-
-  font-size: 1.3rem;
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: var(--color-primary);
-
-  border-color: var(--color-primary);
-
-  transform: translateY(-4px);
-}
-
 .footer-copy {
-  margin-top: 4rem;
-
   text-align: center;
 
   color: var(--color-text-secondary);
@@ -1917,7 +1843,20 @@ body.light-mode {
     #dde2e6 100%
   );
 }
+/*footer */
+body.light-mode footer {
+  background: linear-gradient(
+    to bottom,
+    #dfe4e8,
+    #d1d7dc
+  );
 
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .footer-copy {
+  color: #4f565c;
+}
 /* HEADER */
 
 body.light-mode header {
@@ -1962,7 +1901,9 @@ body.light-mode p {
   color: #4f565c;
 }
 
-/* FOOTER */
+/* ========================================= */
+/* FOOTER MODO CLARO */
+/* ========================================= */
 
 body.light-mode footer {
   background: linear-gradient(
@@ -1974,19 +1915,8 @@ body.light-mode footer {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-body.light-mode .footer-copy,
-body.light-mode .footer-brand p {
+body.light-mode .footer-copy {
   color: #4f565c;
-}
-
-body.light-mode .social-icons a {
-  color: #111111;
-
-  border: 1px solid rgba(0, 0, 0, 0.12);
-}
-
-body.light-mode .social-icons a:hover {
-  color: #ffffff;
 }
 
 /* ========================================= */
@@ -2204,10 +2134,10 @@ body.light-mode .horario-icon {
 }
 
 /* ========================================= */
-/* MODO CLARO - CONTACTO */
+/* REGLAMENTO - MODO CLARO */
 /* ========================================= */
 
-body.light-mode .contact-card {
+body.light-mode .regla-item {
   background: linear-gradient(
     145deg,
     #e5e9ec,
@@ -2216,22 +2146,54 @@ body.light-mode .contact-card {
 
   border: 1px solid rgba(0, 0, 0, 0.08);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
-body.light-mode .contact-card h3 {
+body.light-mode .regla-contenido p {
+  color: #4f565c;
+}
+
+body.light-mode .regla-numero {
+  color: rgba(255, 77, 94, 0.8);
+}
+
+/* ========================================= */
+/* CONTACTO - MODO CLARO */
+/* ========================================= */
+
+body.light-mode .schedule-card {
+  background: linear-gradient(
+    145deg,
+    #e5e9ec,
+    #d6dde2
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .schedule-item h4 {
   color: #111111;
 }
 
-body.light-mode .contact-card a,
-body.light-mode .contact-card address {
-  color: #060707;
+body.light-mode .schedule-item p {
+  color: #4f565c;
 }
 
-body.light-mode .contact-icon {
-  background-color: rgba(255, 77, 94, 0.1);
+body.light-mode .contact-social {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+body.light-mode .contact-social a {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .contact-social a:hover {
+  color: #ffffff;
+}
 /* ========================================= */
 /* PREVENIR DESBORDAMIENTO HORIZONTAL */
 /* ========================================= */

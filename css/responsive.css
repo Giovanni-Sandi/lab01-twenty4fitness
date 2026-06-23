@@ -33,6 +33,24 @@
   .planes-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* ---------- CONTACTO ---------- */
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .map-container iframe {
+    min-height: 420px;
+  }
+
+  /* ---------- REGLAMENTO ---------- */
+
+  .reglamento-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========================================= */
@@ -171,13 +189,6 @@
   .coach-stats {
     gap: 2rem;
   }
-
-  /* ---------- FOOTER ---------- */
-
-  .footer-container {
-    gap: 3rem;
-    text-align: center;
-  }
 }
 
 /* ========================================= */
@@ -234,13 +245,6 @@
     grid-template-columns: 1fr;
   }
 
-  /* ---------- HORARIOS ---------- */
-
-  .horarios-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   /* ---------- REGLAMENTO ---------- */
 
   .regla-item {
@@ -255,8 +259,31 @@
 
   /* ---------- CONTACTO ---------- */
 
-  .contacto-container {
-    grid-template-columns: 1fr;
+  .schedule-card {
+    padding: 2rem;
+  }
+
+  .schedule-card h3 {
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .schedule-item {
+    gap: 1rem;
+  }
+
+  .schedule-item h4 {
+    font-size: 1.05rem;
+  }
+
+  .contact-social a {
+    width: 55px;
+    height: 55px;
+  }
+
+  .map-container iframe {
+    min-height: 350px;
   }
 
   /* ---------- CARRUSEL ---------- */
@@ -401,6 +428,31 @@
   section h2 {
     font-size: 2rem;
   }
+
+  /* ---------- CONTACTO ---------- */
+
+  .schedule-card {
+    padding: 1.5rem;
+  }
+
+  .schedule-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-social {
+    gap: 0.8rem;
+  }
+
+  .contact-social a {
+    width: 50px;
+    height: 50px;
+
+    font-size: 1.3rem;
+  }
+
+  .map-container iframe {
+    min-height: 300px;
+  }
 }
 
 /* ========================================= */
@@ -426,5 +478,4 @@
     right: 15px;
     bottom: 70px;
   }
-
 }
