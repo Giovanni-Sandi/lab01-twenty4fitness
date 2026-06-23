@@ -162,12 +162,19 @@ header.hide-navbar {
 /* ========================================= */
 
 nav {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+}
+
+.nav-links {
   display: flex;
 
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 
-  min-height: 65px;
+  gap: 2.5rem;
 }
 
 nav ul {
@@ -1440,9 +1447,13 @@ nav a:hover::after {
 /* ========================================= */
 
 .accessibility-container {
-  position: relative;
-}
+  position: fixed;
 
+  right: 25px;
+  bottom: 100px;
+
+  z-index: 9999;
+}
 /* BOTÓN PRINCIPAL */
 
 #accessibility-toggle {
@@ -1466,8 +1477,8 @@ nav a:hover::after {
 .accessibility-panel {
   position: absolute;
 
-  top: 75px;
   right: 0;
+  bottom: 70px; /* Se abre hacia arriba */
 
   width: 340px;
   max-height: 80vh;

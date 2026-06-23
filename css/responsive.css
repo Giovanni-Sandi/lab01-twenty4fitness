@@ -402,3 +402,29 @@
     font-size: 2rem;
   }
 }
+
+/* ========================================= */
+/* BOTONES FLOTANTES MÓVIL */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  #scroll-top,
+  #accessibility-toggle {
+    width: 45px;
+    height: 45px;
+
+    font-size: 1.1rem;
+  }
+
+  #scroll-top {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .accessibility-container {
+    right: 15px;
+    bottom: 70px;
+  }
+
+}

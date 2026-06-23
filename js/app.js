@@ -242,18 +242,31 @@ function updateCarousel() {
 /* SIGUIENTE */
 
 function nextSlide() {
-  currentIndex++;
 
-  if (currentIndex >= slides.length) {
+  if (currentIndex === slides.length - 1) {
+
     currentIndex = 0;
+
+    track.style.transition = "none";
+    updateCarousel();
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        track.style.transition = "transform 0.5s ease-in-out";
+      });
+    });
+
+    return;
   }
 
+  currentIndex++;
   updateCarousel();
 }
 
 /* ANTERIOR */
 
 function prevSlide() {
+
   currentIndex--;
 
   if (currentIndex < 0) {
@@ -267,11 +280,10 @@ function prevSlide() {
 
 function resetAutoSlide() {
   clearInterval(autoSlide);
-
   autoSlide = setInterval(nextSlide, 4000);
 }
 
-/* EVENTOS BOTONES */
+/* BOTONES */
 
 nextButton.addEventListener("click", () => {
   nextSlide();
