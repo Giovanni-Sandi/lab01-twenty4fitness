@@ -138,20 +138,60 @@ accessibilityToggle.addEventListener("click", () => {
 
 closeAccessibility.addEventListener("click", () => {
   accessibilityPanel.classList.remove("active");
+  
+});
+/* CERRAR PANEL AL SALIR CON TAB */
+
+accessibilityPanel.addEventListener("focusout", () => {
+
+  setTimeout(() => {
+
+    const focusedElement = document.activeElement;
+
+    const focusInsidePanel =
+      accessibilityPanel.contains(focusedElement);
+
+    const focusOnButton =
+      accessibilityToggle.contains(focusedElement);
+
+    if (!focusInsidePanel && !focusOnButton) {
+      accessibilityPanel.classList.remove("active");
+    }
+
+  }, 0);
+
 });
 
 const readPage = document.getElementById("read-page");
 
+let speech;
+
 readPage.addEventListener("change", () => {
+
   if (readPage.checked) {
-    const speech = new SpeechSynthesisUtterance(
+
+    /* Detener cualquier lectura anterior */
+
+    speechSynthesis.cancel();
+
+    speech = new SpeechSynthesisUtterance(
       document.querySelector("main").innerText,
     );
 
     speech.lang = "es-ES";
 
+    /* Cuando termine la lectura, apagar el switch */
+
+    speech.onend = () => {
+      readPage.checked = false;
+    };
+
     speechSynthesis.speak(speech);
+
   } else {
+
+    /* Detener la lectura inmediatamente */
+
     speechSynthesis.cancel();
   }
 });

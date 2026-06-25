@@ -247,6 +247,18 @@
 
   /* ---------- REGLAMENTO ---------- */
 
+
+  .reglamento-header {
+    text-align: center;
+  }
+
+  .reglamento-header h2 {
+    width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
   .regla-item {
     flex-direction: column;
 
@@ -259,10 +271,41 @@
 
   /* ---------- CONTACTO ---------- */
 
-  .schedule-card {
-    padding: 2rem;
+  .section-tag {
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto 2rem;
   }
 
+  #contacto h2 {
+    text-align: center;
+
+    width: 100%;
+
+    margin: 0 auto 2.5rem;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .schedule-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 2rem;
+
+    text-align: center;
+  }
   .schedule-card h3 {
     font-size: 1.8rem;
 
@@ -270,11 +313,24 @@
   }
 
   .schedule-item {
-    gap: 1rem;
-  }
+    display: flex;
 
+    align-items: center;
+
+    gap: 1rem;
+
+    width: fit-content;
+
+    margin: 0 auto 2rem;
+
+    transform: translateX(-25px);
+  }
   .schedule-item h4 {
     font-size: 1.05rem;
+  }
+
+  .contact-social {
+    justify-content: center;
   }
 
   .contact-social a {

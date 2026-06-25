@@ -1689,7 +1689,18 @@ nav a:hover::after {
 }
 
 .switch input {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
   opacity: 0;
+
+  cursor: pointer;
+
+  z-index: 2;
 }
 
 .slider {
@@ -1728,6 +1739,12 @@ nav a:hover::after {
 
 .switch input:checked + .slider::before {
   transform: translateX(26px);
+}
+
+.switch input:focus + .slider {
+  outline: 3px solid var(--color-primary);
+
+  outline-offset: 4px;
 }
 
 /* ========================================= */
