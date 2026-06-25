@@ -311,17 +311,17 @@
 
     width: min(92vw, 340px);
 
-    max-height: 85vh;
+    height: auto;
+    max-height: fit-content;
 
     padding: 1.5rem;
 
     border-radius: 24px;
 
-    overflow-y: auto;
+    overflow-y: visible;
 
     z-index: 99999;
   }
-
   .accessibility-header {
     margin-bottom: 1rem;
   }

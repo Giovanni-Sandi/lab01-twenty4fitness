@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="es">
+<html lang="es-cr">
   <head>
     <!-- METADATOS -->
 
@@ -51,191 +51,200 @@
     <button id="scroll-top" type="button" aria-label="Volver arriba">↑</button>
 
     <!-- ENCABEZADO -->
+        <header>
+          <!-- NAVEGACIÓN -->
 
-    <header>
-      <!-- NAVEGACIÓN -->
+          <nav aria-label="Navegación principal">
 
-      <nav aria-label="Navegación principal">
-        <!-- MENÚ HAMBURGUESA -->
+            <!-- MENÚ HAMBURGUESA -->
 
-        <button
-          id="menu-toggle"
-          type="button"
-          aria-label="Abrir menú"
-          aria-expanded="false"
-          aria-controls="menu-principal"
-        >
-          ☰
-        </button>
+            <button
+              id="menu-toggle"
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="menu-principal"
+            >
+              ☰
+            </button>
 
-        <!-- LOGO -->
+            <!-- LOGO -->
 
-        <a href="#inicio">
-          <img
-            src="./img/logo/logo-dark.png"
-            alt="Logo de Twenty4 Fitness"
-            class="logo"
-            id="logo"
-            loading="lazy"
-          >
-        </a>
-
-        <!-- MENÚ -->
-
-        <ul class="nav-links" id="menu-principal">
-          <li>
-            <a href="#inicio">Inicio</a>
-          </li>
-
-          <li>
-            <a href="#nosotros">Nosotros</a>
-          </li>
-
-          <li>
-            <a href="#beneficios">Beneficios</a>
-          </li>
-
-          <li>
-            <a href="#planes">Planes</a>
-          </li>
-
-          <li>
-            <a href="#galeria">Galería</a>
-          </li>
-          
-            <a href="#reglamento">Reglamento</a>
-          </li>
-
-          <li>
-            <a href="#contacto">Contacto</a>
-          </li>
-        </ul>
-
-        <!-- Accesibilidad -->
-
-        
-    </header>
-
-    <!-- ========================================= -->
-        <!-- PANEL DE ACCESIBILIDAD -->
-        <!-- ========================================= -->
-
-        <div class="accessibility-container">
-          <button
-            id="accessibility-toggle"
-            aria-label="Abrir opciones de accesibilidad"
-            aria-expanded="false"
-            type="button"
-          >
-            <i class="fa-solid fa-universal-access"></i>
-          </button>
-
-          <aside
-            id="accessibility-panel"
-            class="accessibility-panel"
-            aria-label="Opciones de accesibilidad"
-          >
-            <div class="accessibility-header">
-              <div class="accessibility-title">
-                <i class="fa-solid fa-universal-access"></i>
-
-                <h3>Accesibilidad</h3>
-              </div>
-
-              <button
-                id="close-accessibility"
-                type="button"
-                aria-label="Cerrar panel"
+            <a href="#inicio">
+              <img
+                src="./img/logo/logo-dark.png"
+                alt="Logo de Twenty4 Fitness"
+                class="logo"
+                id="logo"
+                width="1024"
+                height="1024"
+                loading="lazy"
               >
-                <i class="fa-solid fa-xmark"></i>
-              </button>
+            </a>
+
+            <!-- MENÚ -->
+
+            <ul class="nav-links" id="menu-principal">
+              <li>
+                <a href="#inicio">Inicio</a>
+              </li>
+
+              <li>
+                <a href="#nosotros">Nosotros</a>
+              </li>
+
+              <li>
+                <a href="#beneficios">Beneficios</a>
+              </li>
+
+              <li>
+                <a href="#planes">Planes</a>
+              </li>
+
+              <li>
+                <a href="#galeria">Galería</a>
+              </li>
+
+              <li>
+                <a href="#reglamento">Reglamento</a>
+              </li>
+
+              <li>
+                <a href="#contacto">Contacto</a>
+              </li>
+            </ul>
+
+          </nav>
+
+        </header>
+    
+    <!-- ========================================= -->
+    <!-- PANEL DE ACCESIBILIDAD -->
+    <!-- ========================================= -->
+
+          <div class="accessibility-container">
+
+            <button
+              id="accessibility-toggle"
+              aria-label="Abrir opciones de accesibilidad"
+              aria-expanded="false"
+              type="button"
+            >
+              <i class="fa-solid fa-universal-access"></i>
+            </button>
+
+            <aside
+              id="accessibility-panel"
+              class="accessibility-panel"
+              aria-label="Opciones de accesibilidad"
+            >
+
+              
+      
+      
+          <div class="accessibility-header">
+            <div class="accessibility-title">
+              <i class="fa-solid fa-universal-access"></i>
+
+              <h3>Accesibilidad</h3>
             </div>
 
-            <hr >
+            <button
+              id="close-accessibility"
+              type="button"
+              aria-label="Cerrar panel"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
 
-            <!-- Tema -->
+          <hr>
 
-            <div class="accessibility-option">
-              <div class="option-info">
-                <i class="fa-solid fa-moon"></i>
+          <!-- Tema -->
 
-                <span>Modo oscuro / claro</span>
-              </div>
+          <div class="accessibility-option">
+            <div class="option-info">
+              <i class="fa-solid fa-moon"></i>
 
-              <button id="theme-toggle" type="button" aria-label="Cambiar tema">
-                🌙
-              </button>
+              <span>Modo oscuro / claro</span>
             </div>
 
-            <!-- Alto contraste -->
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              🌙
+            </button>
+          </div>
 
-            <div class="accessibility-option">
-              <div class="option-info">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+          <!-- Alto contraste -->
 
-                <span>Alto contraste</span>
-              </div>
+          <div class="accessibility-option">
+            <div class="option-info">
+              <i class="fa-solid fa-circle-half-stroke"></i>
 
-              <label class="switch">
-                <input type="checkbox" id="contrast-toggle" >
-
-                <span class="slider"></span>
-              </label>
+              <span>Alto contraste</span>
             </div>
 
-            <!-- Lectura -->
+            <label class="switch">
+              <input type="checkbox" id="contrast-toggle">
 
-            <div class="accessibility-option">
-              <div class="option-info">
-                <i class="fa-solid fa-volume-high"></i>
+              <span class="slider"></span>
+            </label>
+          </div>
 
-                <span>Leer en voz alta</span>
-              </div>
+          <!-- Lectura -->
 
-              <label class="switch">
-                <input type="checkbox" id="read-page" >
+          <div class="accessibility-option">
+            <div class="option-info">
+              <i class="fa-solid fa-volume-high"></i>
 
-                <span class="slider"></span>
-              </label>
+              <span>Leer en voz alta</span>
             </div>
 
-            <hr >
+            <label class="switch">
+              <input type="checkbox" id="read-page">
 
-            <!-- Texto -->
+              <span class="slider"></span>
+            </label>
+          </div>
 
-            <div class="accessibility-option">
-              <div class="option-info">
-                <span class="text-icon">A+</span>
+          <hr>
 
-                <span>Aumentar texto</span>
-              </div>
+          <!-- Texto -->
 
-              <button id="increase-font" type="button">+</button>
+          <div class="accessibility-option">
+            <div class="option-info">
+              <span class="text-icon">A+</span>
+
+              <span>Aumentar texto</span>
             </div>
 
-            <div class="accessibility-option">
-              <div class="option-info">
-                <span class="text-icon">A−</span>
+            <button id="increase-font" type="button">+</button>
+          </div>
 
-                <span>Disminuir texto</span>
-              </div>
+          <div class="accessibility-option">
+            <div class="option-info">
+              <span class="text-icon">A−</span>
 
-              <button id="decrease-font" type="button">−</button>
+              <span>Disminuir texto</span>
             </div>
 
-            <div class="accessibility-option">
-              <div class="option-info">
-                <span class="text-icon">A</span>
+            <button id="decrease-font" type="button">−</button>
+          </div>
 
-                <span>Tamaño normal</span>
-              </div>
+          <div class="accessibility-option">
+            <div class="option-info">
+              <span class="text-icon">A</span>
 
-              <button id="reset-font" type="button">↺</button>
+              <span>Tamaño normal</span>
             </div>
-          </aside>
-        </div>
-      </nav>
 
+            <button id="reset-font" type="button">↺</button>
+          </div>
+        </aside>
+      </div>     
     <!-- CONTENIDO PRINCIPAL -->
 
     <main id="main-content">
@@ -308,6 +317,8 @@
               <img
                 src="./img/nosotros/coach.jpg"
                 alt="Coach principal de Twenty4 Fitness"
+                width="1080"
+                height="950"
                 loading="lazy"
               >
             </div>
@@ -577,6 +588,8 @@
                   <img
                     src="./img/galeria/gym-1.jpg"
                     alt="Área principal de entrenamiento de Twenty4 Fitness"
+                    width="1086"
+                    height="1448"
                     loading="lazy"
                   >
                 </figure>
@@ -585,6 +598,8 @@
                   <img
                     src="./img/galeria/gym-2.jpg"
                     alt="Zona de máquinas y equipamiento moderno del gimnasio"
+                    width="1672"
+                    height="941"
                     loading="lazy"
                   >
                 </figure>
@@ -593,6 +608,8 @@
                   <img
                     src="./img/galeria/gym-3.jpg"
                     alt="Espacio de entrenamiento funcional de Twenty4 Fitness"
+                    width="1445"
+                    height="1088"
                     loading="lazy"
                   >
                 </figure>
@@ -601,6 +618,8 @@
                   <img
                     src="./img/galeria/gym-4.jpg"
                     alt="Instalaciones interiores del gimnasio Twenty4 Fitness"
+                    width="1088"
+                    height="1445"
                     loading="lazy"
                   >
                 </figure>
@@ -609,6 +628,8 @@
                   <img
                     src="./img/galeria/gym-5.jpg"
                     alt="Área de pesas y musculación del gimnasio"
+                    width="1088"
+                    height="1445"
                     loading="lazy"
                   >
                 </figure>
@@ -617,6 +638,8 @@
                   <img
                     src="./img/galeria/gym-6.jpg"
                     alt="Vista general de las instalaciones de Twenty4 Fitness"
+                    width="1445"
+                    height="1088"
                     loading="lazy"
                   >
                 </figure>

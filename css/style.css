@@ -224,7 +224,11 @@ nav a:hover::after {
 
 .logo {
   width: 130px;
+  height: auto;
+
   object-fit: contain;
+
+  display: block;
 }
 
 /* ========================================= */
@@ -1537,10 +1541,10 @@ nav a:hover::after {
 /* PANEL */
 
 .accessibility-panel {
-  position: absolute;
+  position: fixed;
 
-  right: 0;
-  bottom: 70px; /* Se abre hacia arriba */
+  right: 25px;
+  bottom: 165px;
 
   width: 340px;
   max-height: 80vh;
