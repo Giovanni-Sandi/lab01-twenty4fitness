@@ -8,7 +8,7 @@ Landing Page responsiva desarrollada para el Laboratorio #1 del curso **Programa
 * **Tipo:** Landing Page responsiva
 * **Curso:** Programación en Ambiente Web I
 * **Universidad:** Universidad Técnica Nacional
-* **Estudiante:** Giovanni
+* **Estudiante:** Luis Giovanni Sandi Azofeifa
 * **Año:** 2026
 
 ## 🚀 Características
@@ -69,6 +69,6 @@ Landing page para el gimnasio Twenty4 Fitness, diseñada para ofrecer informaci�
 
 ## 👨‍💻 Autor
 
-**Giovanni**
+**Luis Giovanni Sandi Azofeifa**
 Estudiante de Ingeniería en Software
 Universidad Técnica Nacional
